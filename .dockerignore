@@ -1,0 +1,19 @@
+# Keep the build context small and free of host-specific state.
+node_modules
+build
+.react-router
+.git
+.github
+.claude
+research
+
+# Local env files: the image takes configuration through build args instead.
+.env
+.env.*
+!.env.example
+
+# Editor and OS noise
+.vscode
+.idea
+.DS_Store
+*.log

@@ -1,0 +1,39 @@
+name: iriic-website
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Empty: the container serves the site at the domain root.
+        BASE_PATH: "${BASE_PATH-}"
+        # Public origin of this deployment, e.g. https://iriic.example.org
+        SITE_URL: "${SITE_URL-}"
+        # Optional. Empty values render a mailto fallback instead of forms.
+        VITE_EMAILJS_SERVICE_ID: "${VITE_EMAILJS_SERVICE_ID-}"
+        VITE_EMAILJS_TEMPLATE_ID: "${VITE_EMAILJS_TEMPLATE_ID-}"
+        VITE_EMAILJS_PUBLIC_KEY: "${VITE_EMAILJS_PUBLIC_KEY-}"
+    image: iriic-website:latest
+    container_name: iriic-website
+    restart: unless-stopped
+    # Bound to loopback: put a TLS-terminating reverse proxy in front rather
+    # than exposing the container to the network directly.
+    ports:
+      - "127.0.0.1:${HOST_PORT:-8080}:8080"
+    read_only: true
+    # nginx needs somewhere writable for its pid file and temp buffers.
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 64
+    mem_limit: 128m
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
