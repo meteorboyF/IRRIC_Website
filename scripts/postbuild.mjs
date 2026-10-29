@@ -15,7 +15,7 @@
  * deployment. See nginx.conf.
  */
 import { createHash } from 'node:crypto';
-import { existsSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync, copyFileSync } from 'node:fs';
+import { cpSync, existsSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync, copyFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -27,6 +27,18 @@ const siteUrl = ((process.env.SITE_URL ?? '').trim() || `https://meteorboyf.gith
 if (!existsSync(client)) {
 	console.error('postbuild: build/client not found. Run react-router build first.');
 	process.exit(1);
+}
+
+// With a basename, React Router writes prerendered HTML under
+// build/client/<base>/ while assets stay at build/client/. The Pages artifact
+// is served *at* the base path, so lift the HTML tree to the root.
+if (basePath) {
+	const nested = join(client, basePath.replace(/^\//, ''));
+	if (existsSync(nested)) {
+		cpSync(nested, client, { recursive: true });
+		rmSync(nested, { recursive: true, force: true });
+		console.log(`postbuild: moved prerendered pages from ${basePath}/ to the artifact root`);
+	}
 }
 
 /** Directives shared by every page; script hashes are appended per page. */
