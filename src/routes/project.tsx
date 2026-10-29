@@ -58,7 +58,7 @@ export default function ProjectDetail() {
 
 	return (
 		<>
-			<section className={`on-dark relative flex min-h-[56svh] items-end text-white ${heroPhoto ? 'photo-duo scrim' : 'band-dark grain'}`}>
+			<section className={`on-dark relative flex items-end text-white ${heroPhoto ? 'photo-duo scrim min-h-[56svh]' : 'band-dark grain'}`}>
 				{heroPhoto && <img src={img(heroPhoto.name, 'sm')} srcSet={srcSet(heroPhoto.name)} sizes="100vw" alt={heroPhoto.alt} width={imageSize(heroPhoto.name)[0]} height={imageSize(heroPhoto.name)[1]} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
 				<div className="container-page relative z-10 pt-28 pb-12 lg:pb-16">
 					<Link to={NAV.projects.to} className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">

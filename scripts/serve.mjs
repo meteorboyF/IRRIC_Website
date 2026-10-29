@@ -6,7 +6,7 @@
  */
 import { createReadStream, existsSync, statSync } from 'node:fs';
 import { createServer } from 'node:http';
-import { extname, join, normalize, resolve } from 'node:path';
+import { extname, join, normalize, resolve, sep } from 'node:path';
 
 const root = resolve('build/client');
 const base = (process.env.BASE_PATH ?? '').replace(/\/+$/, '');
@@ -23,7 +23,7 @@ createServer((req, res) => {
 		path = path.slice(base.length) || '/';
 	}
 	const file = normalize(join(root, path));
-	if (!file.startsWith(root)) {
+	if (file !== root && !file.startsWith(root + sep)) {
 		res.writeHead(400).end();
 		return;
 	}
