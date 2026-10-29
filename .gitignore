@@ -1,0 +1,21 @@
+node_modules
+
+# Build output
+build
+.react-router
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env: never commit real environment files
+.env
+.env.*
+!.env.example
+
+# Vite
+vite.config.ts.timestamp-*
+*.log
+
+# Local editor and agent tooling config
+.claude/
