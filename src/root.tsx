@@ -1,7 +1,7 @@
 import '@fontsource-variable/inter';
 import '@fontsource-variable/space-grotesk';
 import './app.css';
-import type { ReactNode } from 'react';
+import { useEffect, type ReactNode } from 'react';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, type LinksFunction } from 'react-router';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
@@ -43,6 +43,10 @@ export function Layout({ children }: { children: ReactNode }) {
 }
 
 export default function App() {
+	// Tells public/boot.js that hydration succeeded, so it keeps reveal effects on.
+	useEffect(() => {
+		document.documentElement.setAttribute('data-hydrated', '');
+	}, []);
 	return <Outlet />;
 }
 

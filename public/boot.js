@@ -3,7 +3,13 @@
 
 // 1. Scroll-reveal content starts hidden only when JavaScript is present to
 //    reveal it (see .js .reveal in app.css).
+//    Failsafe: if React has not hydrated within 4 seconds (a blocked script,
+//    or HTML cached from a previous deploy whose assets are gone), drop the
+//    hidden state so the prerendered page is fully readable anyway.
 document.documentElement.classList.add('js');
+setTimeout(function () {
+	if (!document.documentElement.hasAttribute('data-hydrated')) document.documentElement.classList.remove('js');
+}, 4000);
 
 // 2. Trusted Types. The CSP sets `require-trusted-types-for 'script'` and
 //    `trusted-types default`, so every HTML sink needs this policy's say-so.
