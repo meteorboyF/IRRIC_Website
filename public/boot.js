@@ -13,12 +13,27 @@ document.documentElement.classList.add('js');
 //    - schema.org JSON-LD from src/components/JsonLd.tsx, which is
 //      JSON.stringify output with every "<" escaped, so it cannot contain
 //      markup.
+//    It also allows script URLs that are this site's own .js files under
+//    its base path (what React Router loads), which matters only if React
+//    ever re-creates a <script src> element on the client.
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
+	var base = new URL('.', document.currentScript ? document.currentScript.src : location.href).href;
 	window.trustedTypes.createPolicy('default', {
 		createHTML: function (value) {
+			if (typeof value !== 'string') return null;
 			if (value === '<script></script>') return value;
 			if (value.indexOf('{"@context":"https://schema.org"') === 0 && value.indexOf('<') === -1) return value;
 			return null;
+		},
+		createScriptURL: function (value) {
+			if (typeof value !== 'string') return null;
+			var url;
+			try {
+				url = new URL(value, location.href);
+			} catch {
+				return null;
+			}
+			return url.href.indexOf(base) === 0 && /\.js$/.test(url.pathname) && !url.search && !url.hash ? url.href : null;
 		}
 	});
 }

@@ -5,6 +5,7 @@ import { Reveal } from '../components/Reveal';
 import { NAV } from '../components/nav';
 import { ADDRESS_LINES, CONTACT_EMAIL, FORMS_ENABLED, OFFICE_HOURS, PHONE, SOCIALS } from '../lib/config';
 import { COOLDOWN_SECONDS, LIMITS, MAILTO, cooldownRemaining, isValidEmail, isValidPhone, sendEnquiry, type FormStatus } from '../lib/forms';
+import { useHydrated } from '../hooks/useHydrated';
 import { seo } from '../lib/seo';
 
 export const meta = () => seo({ title: 'Contact', description: 'Contact IRIIC at United International University about partnerships, incubation, research collaboration, media or careers.', path: '/contact/', image: 'hero/about' });
@@ -24,13 +25,16 @@ const ORDER: Field[] = ['name', 'email', 'phone', 'organisation', 'topic', 'mess
 
 export default function Contact() {
 	const [params] = useSearchParams();
+	// The query string is read only after hydration, so the first client
+	// render matches the prerendered HTML (which has no query string).
+	const hydrated = useHydrated();
 	const base = useId();
 	const id = (field: Field) => `${base}-${field}`;
 	const [values, setValues] = useState({ name: '', email: '', phone: '', organisation: '', topic: '' as Topic | '', message: '' });
 	// A link such as /contact/?topic=careers preselects the enquiry type until
 	// the reader picks one. Only known topic names are accepted.
 	const [topicChosen, setTopicChosen] = useState(false);
-	const requested = params.get('topic');
+	const requested = hydrated ? params.get('topic') : null;
 	const requestedTopic = TOPICS.find((item) => item.value === requested)?.value ?? '';
 	const topic: Topic | '' = topicChosen ? values.topic : values.topic || requestedTopic;
 	const [honeypot, setHoneypot] = useState('');

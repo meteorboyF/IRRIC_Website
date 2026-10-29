@@ -16,7 +16,7 @@ export function meta({ params }: Route.MetaArgs) {
 	if (!vacancy) return seo({ title: 'Page not found', description: 'This page does not exist.', path: '/404/', noindex: true });
 	const open = isOpen(vacancy, BUILD_DATE);
 	const status = open && vacancy.deadline ? `Apply by ${formatDeadline(vacancy.deadline)}.` : 'This role has closed.';
-	return seo({ title: `${vacancy.title}, ${vacancy.project}`, description: `${vacancy.type} role at ${vacancy.project}, ${vacancy.location}. ${status}`, path: `/careers/${vacancy.slug}/`, image: 'hero/careers' });
+	return seo({ title: vacancy.project === 'IRIIC' ? vacancy.title : `${vacancy.title}, ${vacancy.project}`, description: `${vacancy.type} role at ${vacancy.project === 'IRIIC' ? 'IRIIC' : `${vacancy.project}, IRIIC`}, ${vacancy.location}. ${status}`, path: `/careers/${vacancy.slug}/`, image: 'hero/careers' });
 }
 
 const EMPLOYMENT_TYPE: Record<Vacancy['type'], string[]> = {

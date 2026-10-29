@@ -13,7 +13,8 @@ export function Marquee({ children, label }: { children: ReactNode; label: strin
 			<div className="mb-4 flex justify-end motion-reduce:hidden">
 				<button type="button" className="chip" aria-pressed={paused} onClick={() => setPaused((value) => !value)}>
 					<Icon name={paused ? 'play' : 'pause'} className="h-4 w-4" />
-					{paused ? 'Play logo strip' : 'Pause logo strip'}
+					{/* Fixed label: aria-pressed carries the state. */}
+					Pause logo strip
 				</button>
 			</div>
 			<section className={`marquee ${paused ? 'is-paused' : ''}`} aria-label={label}>
