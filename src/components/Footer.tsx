@@ -20,7 +20,7 @@ export function Footer() {
 	const [logoWidth, logoHeight] = imageSize('brand/iriic-logo');
 	const [uiuWidth, uiuHeight] = imageSize('brand/uiu-logo-white');
 	return (
-		<footer className="on-dark band-dark grain">
+		<footer className="on-dark surface-deep traces-light">
 			<div className="container-page py-16">
 				<div className="grid gap-10 md:grid-cols-2 lg:grid-cols-5">
 					<div className="lg:col-span-2">
@@ -62,7 +62,7 @@ export function Footer() {
 					<ul className="flex gap-3">
 						{SOCIAL.map((item) => (
 							<li key={item.href}>
-								<a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={`${item.label} (opens in a new tab)`} className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white/85 transition-colors hover:border-ocean-300 hover:text-ocean-200">
+								<a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={`${item.label} (opens in a new tab)`} className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white/85 transition-colors hover:border-ember-300 hover:text-ember-300">
 									<Icon name={item.icon} className="h-5 w-5" />
 								</a>
 							</li>

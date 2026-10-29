@@ -1,4 +1,6 @@
 import { useRef, useState } from 'react';
+import { PageHeader } from '../components/PageHeader';
+import { PageIntro } from '../components/PageIntro';
 import { Link, useParams } from 'react-router';
 import { pressByProject } from '../data/press';
 import { projectBySlug, projects } from '../data/projects';
@@ -12,7 +14,7 @@ import { Reveal } from '../components/Reveal';
 import { SmartLink } from '../components/SmartLink';
 import { StatusTag } from '../components/StatusTag';
 import { NAV } from '../components/nav';
-import { img, imageSize, srcSet } from '../lib/img';
+import { img } from '../lib/img';
 import { seo } from '../lib/seo';
 import { NotFoundContent } from '../components/NotFoundContent';
 import type { Route } from './+types/project';
@@ -50,6 +52,14 @@ export default function ProjectDetail() {
 	const related = projects.filter((other) => other.slug !== project.slug && other.type === project.type).slice(0, 3);
 	const heroPhoto = project.image && project.image.fit !== 'contain' ? project.image : null;
 
+	const eyebrow = `${project.type}${project.dateLabel ? ` · ${project.dateLabel}` : ''}`;
+	const backLink = (
+		<Link to={NAV.projects.to} className="inline-flex items-center gap-2 text-sm font-semibold text-ocean-800 hover:text-ink-900">
+			<Icon name="arrow-left" className="h-4 w-4" />
+			{NAV.projects.label}
+		</Link>
+	);
+
 	function showEverything() {
 		setShowAll(true);
 		// Keep keyboard users anchored: move focus to the first newly shown photo.
@@ -58,21 +68,11 @@ export default function ProjectDetail() {
 
 	return (
 		<>
-			<section className={`on-dark relative flex items-end text-white ${heroPhoto ? 'photo-duo scrim min-h-[56svh]' : 'band-dark grain'}`}>
-				{heroPhoto && <img src={img(heroPhoto.name, 'sm')} srcSet={srcSet(heroPhoto.name)} sizes="100vw" alt={heroPhoto.alt} width={imageSize(heroPhoto.name)[0]} height={imageSize(heroPhoto.name)[1]} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />}
-				<div className="container-page relative z-10 pt-28 pb-12 lg:pb-16">
-					<Link to={NAV.projects.to} className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">
-						<Icon name="arrow-left" className="h-4 w-4" />
-						{NAV.projects.label}
-					</Link>
-					<p className="eyebrow">
-						{project.type}
-						{project.dateLabel && ` · ${project.dateLabel}`}
-					</p>
-					<h1 className="mt-3 max-w-5xl font-display text-[clamp(2.3rem,6vw,4.75rem)] leading-[1.02] font-bold text-balance">{project.title}</h1>
-					<p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/85">{project.tagline}</p>
-				</div>
-			</section>
+			{heroPhoto ? (
+				<PageIntro eyebrow={eyebrow} title={project.title} lede={project.tagline} photo={heroPhoto.name} photoAlt={heroPhoto.alt} before={backLink} />
+			) : (
+				<PageHeader eyebrow={eyebrow} title={project.title} lede={project.tagline} before={backLink} />
+			)}
 
 			<section className="bg-paper py-16 lg:py-24">
 				<div className="container-page grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">

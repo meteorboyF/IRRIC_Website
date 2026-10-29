@@ -19,7 +19,7 @@ export function ProjectImage({ image, sizes, className = '', priority = false, d
 	const [width, height] = imageSize(image.name);
 	const contain = image.fit === 'contain';
 	return (
-		<div className={`relative overflow-hidden ${contain ? 'bg-ocean-50' : 'photo bg-ink-100'} ${className}`}>
+		<div className={`relative overflow-hidden ${contain ? 'bg-ocean-50' : 'bg-ocean-100'} ${className}`}>
 			<img
 				src={img(image.name, 'sm')}
 				srcSet={srcSet(image.name)}

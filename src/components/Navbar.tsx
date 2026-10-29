@@ -9,7 +9,7 @@ const ABOUT_MENU = [NAV.about, NAV.people, NAV.partners];
 const MAIN = [NAV.projects, NAV.programmes, NAV.careers, NAV.news];
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
-	`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-ink-50 hover:text-ink-900 ${isActive ? 'text-ocean-700' : 'text-ink-700'}`;
+	`rounded-full px-4 py-2 text-[0.9375rem] font-semibold transition-colors hover:text-ocean-800 ${isActive ? 'bg-ocean-50 text-ocean-800' : 'text-ink-700'}`;
 
 export function Navbar() {
 	const location = useLocation();
@@ -79,18 +79,19 @@ export function Navbar() {
 	}, [aboutOpen, mobileOpen]);
 
 	return (
-		<header className={`sticky top-0 z-50 border-b transition-colors ${scrolled || mobileOpen ? 'border-ink-900/12 bg-paper shadow-sm' : 'border-ink-900/6 bg-paper/95'}`}>
-			<nav className="container-page flex h-16 items-center justify-between gap-4" aria-label="Main">
+		<header className={`sticky top-0 z-50 transition-[background-color,box-shadow] ${scrolled || mobileOpen ? 'bg-white/95 shadow-[0_1px_0_rgb(14_86_135/0.12)]' : 'bg-ocean-50/95'}`}>
+			<nav className="container-page flex h-[4.25rem] items-center justify-between gap-4" aria-label="Main">
 				<Link to="/" className="flex shrink-0 items-center" aria-label="IRIIC home">
 					<img src={img('brand/iriic-logo')} alt="IRIIC: Institute of Research, Innovation, Incubation and Commercialization" width={logoWidth} height={logoHeight} className="h-10 w-auto" />
 				</Link>
 
-				<div className="hidden items-center gap-1 lg:flex">
+				<div className="hidden items-center gap-3 lg:flex">
+					<div className="flex items-center gap-0.5 rounded-full border border-ocean-700/12 bg-white/80 p-1">
 					<div ref={aboutWrapper} className="relative">
 						<button
 							ref={aboutToggle}
 							type="button"
-							className={`flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-ink-50 hover:text-ink-900 ${inAbout ? 'text-ocean-700' : 'text-ink-700'}`}
+							className={`flex items-center gap-1 rounded-full px-4 py-2 text-[0.9375rem] font-semibold transition-colors hover:text-ocean-800 ${inAbout ? 'bg-ocean-50 text-ocean-800' : 'text-ink-700'}`}
 							aria-expanded={aboutOpen}
 							aria-controls={menuId}
 							onClick={() => setAboutOpen((open) => !open)}
@@ -99,10 +100,10 @@ export function Navbar() {
 							<Icon name="chevron-down" className={`h-4 w-4 transition-transform ${aboutOpen ? 'rotate-180' : ''}`} />
 						</button>
 						{aboutOpen && (
-							<ul id={menuId} className="menu-enter absolute top-full left-0 mt-2 w-56 rounded-xl border border-ink-900/10 bg-white p-2 shadow-card-lg">
+							<ul id={menuId} className="menu-enter absolute top-full left-0 mt-3 w-56 rounded-2xl border border-ocean-700/12 bg-white p-2 shadow-card-lg">
 								{ABOUT_MENU.map((item) => (
 									<li key={item.to}>
-										<NavLink to={item.to} end className={({ isActive }) => `block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-ink-50 ${isActive ? 'bg-ocean-50 text-ocean-800' : 'text-ink-700'}`}>
+										<NavLink to={item.to} end className={({ isActive }) => `block rounded-xl px-3 py-2.5 text-[0.9375rem] font-semibold hover:bg-ocean-50 ${isActive ? 'bg-ocean-50 text-ocean-800' : 'text-ink-700'}`}>
 											{item.label}
 										</NavLink>
 									</li>
@@ -115,7 +116,8 @@ export function Navbar() {
 							{item.label}
 						</NavLink>
 					))}
-					<Link to={CTA.to} className="btn btn-cta btn-sm ml-3">
+					</div>
+					<Link to={CTA.to} className="btn btn-cta btn-sm">
 						{CTA.label}
 					</Link>
 				</div>
@@ -123,7 +125,7 @@ export function Navbar() {
 				<button
 					ref={mobileToggle}
 					type="button"
-					className="rounded-md p-2 text-ink-900 lg:hidden"
+					className="rounded-full border border-ocean-700/15 bg-white p-2 text-ink-900 lg:hidden"
 					aria-expanded={mobileOpen}
 					aria-controls={mobileId}
 					aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
@@ -134,11 +136,11 @@ export function Navbar() {
 			</nav>
 
 			{mobileOpen && (
-				<div id={mobileId} className="menu-enter max-h-[calc(100svh-4rem)] overflow-y-auto border-t border-ink-900/10 bg-paper px-5 pt-2 pb-6 lg:hidden">
+				<div id={mobileId} className="menu-enter max-h-[calc(100svh-4.25rem)] overflow-y-auto border-t border-ocean-700/12 bg-white px-5 pt-2 pb-6 lg:hidden">
 					<ul>
 						{[NAV.home, ...ABOUT_MENU, ...MAIN].map((item) => (
 							<li key={item.to}>
-								<NavLink to={item.to} end className={({ isActive }) => `block rounded-lg px-3 py-3 text-base font-medium ${isActive ? 'bg-ocean-50 text-ocean-800' : 'text-ink-900'} ${item.to === NAV.people.to || item.to === NAV.partners.to ? 'pl-7' : ''}`}>
+								<NavLink to={item.to} end className={({ isActive }) => `block rounded-xl px-3 py-3 text-base font-semibold ${isActive ? 'bg-ocean-50 text-ocean-800' : 'text-ink-900'} ${item.to === NAV.people.to || item.to === NAV.partners.to ? 'pl-7' : ''}`}>
 									{item.label}
 								</NavLink>
 							</li>

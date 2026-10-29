@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router';
+import { PageHeader } from '../components/PageHeader';
 import { formatDeadline, isOpen, vacancyBySlug } from '../data/vacancies';
 import type { Vacancy } from '../data/types';
 import { Icon } from '../components/Icon';
@@ -73,27 +74,26 @@ export default function VacancyDetail() {
 	return (
 		<>
 			{open && <JsonLd data={jobPosting(vacancy)} />}
-			<section className="on-dark band-dark grain pt-28 pb-12 lg:pb-16">
-				<div className="container-page">
-					<Link to={NAV.careers.to} className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">
+			<PageHeader
+				eyebrow={vacancy.project}
+				title={vacancy.title}
+				before={
+					<Link to={NAV.careers.to} className="inline-flex items-center gap-2 text-sm font-semibold text-ocean-800 hover:text-ink-900">
 						<Icon name="arrow-left" className="h-4 w-4" />
 						{NAV.careers.label}
 					</Link>
-					<p className="eyebrow">{vacancy.project}</p>
-					<h1 className="mt-3 max-w-4xl font-display text-[clamp(2.2rem,5.5vw,4rem)] leading-[1.04] font-bold text-balance">{vacancy.title}</h1>
-					<div className="mt-6 flex flex-wrap items-center gap-3 text-sm font-semibold text-white/85">
-						<span className={`tag ${open ? 'tag-live' : 'tag-muted'}`}>{open ? 'Open' : 'Closed'}</span>
-						<span className="inline-flex items-center gap-1.5">
-							<Icon name="briefcase" className="h-4 w-4" />
-							{vacancy.type}
-						</span>
-						<span className="inline-flex items-center gap-1.5">
-							<Icon name="map-pin" className="h-4 w-4" />
-							{vacancy.location}
-						</span>
-					</div>
-				</div>
-			</section>
+				}
+			>
+				<span className={`tag ${open ? 'tag-live' : 'tag-muted'}`}>{open ? 'Open' : 'Closed'}</span>
+				<span className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-700">
+					<Icon name="briefcase" className="h-4 w-4" />
+					{vacancy.type}
+				</span>
+				<span className="inline-flex items-center gap-1.5 text-sm font-semibold text-ink-700">
+					<Icon name="map-pin" className="h-4 w-4" />
+					{vacancy.location}
+				</span>
+			</PageHeader>
 
 			<section className="bg-paper py-16 lg:py-24">
 				<div className="container-page grid gap-12 lg:grid-cols-[1.3fr_0.7fr]">

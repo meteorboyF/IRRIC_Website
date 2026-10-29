@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { img, imageSize, srcSet } from '../lib/img';
+import { Traces } from './Traces';
 
 interface Props {
 	eyebrow: string;
@@ -8,24 +9,31 @@ interface Props {
 	/** Hero image name, e.g. 'hero/about'. */
 	photo: string;
 	photoAlt: string;
+	/** Back link above the label. */
+	before?: ReactNode;
 	children?: ReactNode;
 }
 
-/** Full-bleed duotone photo band that opens every top-level page. */
-export function PageIntro({ eyebrow, title, lede, photo, photoAlt, children }: Props) {
+/** Light split hero for top-level pages: copy left, framed photograph right. */
+export function PageIntro({ eyebrow, title, lede, photo, photoAlt, before, children }: Props) {
 	const [width, height] = imageSize(photo);
 	return (
-		<section className="on-dark photo-duo scrim relative flex min-h-[52svh] items-end text-white">
-			<img src={img(photo, 'sm')} srcSet={srcSet(photo)} sizes="100vw" alt={photoAlt} width={width} height={height} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
-			<div className="container-page relative z-10 pt-32 pb-12 lg:pb-16">
-				<p className="eyebrow mb-4">{eyebrow}</p>
-				<h1 className="max-w-5xl font-display text-[clamp(2.4rem,6.5vw,5rem)] leading-[1.02] font-bold text-balance">
-					<span className="line-mask">
-						<span>{title}</span>
-					</span>
-				</h1>
-				{lede && <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">{lede}</p>}
-				{children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
+		<section className="surface-sky relative overflow-hidden">
+			<Traces className="pointer-events-none absolute hidden lg:block -top-10 -right-24 w-[46rem] max-w-none text-ocean-300/60" />
+			<div className="container-page relative grid items-center gap-10 pt-12 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:pt-16 lg:pb-20">
+				<div className="rise">
+					{before && <div className="mb-6">{before}</div>}
+					<p className="node-label mb-5">{eyebrow}</p>
+					<h1 className="text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.02] text-balance">{title}</h1>
+					{lede && <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-700">{lede}</p>}
+					{children && <div className="mt-8 flex flex-wrap gap-3">{children}</div>}
+				</div>
+				<div className="rise rise-2 relative">
+					<div className="absolute -right-3 -bottom-3 hidden h-full w-full rounded-[1.75rem] bg-ember-200 sm:block" aria-hidden="true" />
+					<div className="frame relative aspect-[4/3] shadow-card-lg">
+						<img src={img(photo, 'sm')} srcSet={srcSet(photo)} sizes="(min-width: 1024px) 45vw, 100vw" alt={photoAlt} width={width} height={height} fetchPriority="high" className="absolute inset-0 h-full w-full object-cover" />
+					</div>
+				</div>
 			</div>
 		</section>
 	);

@@ -19,7 +19,7 @@ export default function News() {
 
 			<section className="bg-paper py-20 lg:py-24" aria-labelledby="recent">
 				<div className="container-page">
-					<SectionHead number="01" id="recent" eyebrow="Recent" title="Latest programmes and events" />
+					<SectionHead id="recent" eyebrow="Recent" title="Latest programmes and events" />
 					<ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 						{recent.map((project, index) => (
 							<Reveal as="li" key={project.slug} delay={(index % 3) as 0 | 1 | 2}>
@@ -30,17 +30,17 @@ export default function News() {
 				</div>
 			</section>
 
-			<section className="on-dark band-dark grain py-20 lg:py-24" aria-labelledby="press">
+			<section className="bg-white py-20 lg:py-24" aria-labelledby="press">
 				<div className="container-page">
-					<SectionHead number="02" id="press" eyebrow="In the press" title="Coverage" onDark lede="Articles about IRIIC and its labs. Links open the publisher’s site." />
-					<ul className="mt-12 divide-y divide-white/12 border-y border-white/12">
+					<SectionHead id="press" eyebrow="In the press" title="Coverage" lede="Articles about IRIIC and its labs. Links open the publisher’s site." />
+					<ul className="mt-12 grid gap-4 md:grid-cols-2">
 						{coverage.map((item) => (
-							<li key={item.slug} className="grid gap-2 py-5 sm:grid-cols-[12rem_1fr] sm:gap-8">
-								<p className="text-sm text-white/70">
-									<span className="block font-display font-bold text-white">{item.outlet}</span>
-									{item.dateLabel}
+							<li key={item.slug} className="card flex flex-col gap-2 p-6">
+								<p className="text-sm text-ink-600">
+									<span className="font-display font-bold text-ocean-800">{item.outlet}</span>
+									{item.dateLabel && ` · ${item.dateLabel}`}
 								</p>
-								<SmartLink href={item.url} className="group inline-flex items-start gap-2 font-display text-lg leading-snug font-semibold text-white hover:text-ocean-200">
+								<SmartLink href={item.url} className="group inline-flex items-start gap-2 font-display text-lg leading-snug font-semibold text-ink-900 hover:text-ocean-700">
 									<span>{item.headline}</span>
 									<Icon name="arrow-up-right" className="mt-1 h-4 w-4 shrink-0" />
 								</SmartLink>

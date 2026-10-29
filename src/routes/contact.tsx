@@ -1,4 +1,5 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
+import { PageHeader } from '../components/PageHeader';
 import { Link, useSearchParams } from 'react-router';
 import { Icon } from '../components/Icon';
 import { Reveal } from '../components/Reveal';
@@ -140,17 +141,7 @@ export default function Contact() {
 
 	return (
 		<>
-			<section className="on-dark band-dark grain pt-28 pb-14 lg:pb-16">
-				<div className="container-page max-w-4xl">
-					<p className="eyebrow">Contact</p>
-					<h1 className="mt-3 font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.02] font-bold">
-						<span className="line-mask">
-							<span>Talk to IRIIC</span>
-						</span>
-					</h1>
-					<p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/85">Partnerships, incubation, research collaboration, media and careers. Write to us and the right person will reply by email.</p>
-				</div>
-			</section>
+			<PageHeader eyebrow="Contact" title="Talk to IRIIC" lede="Partnerships, incubation, research collaboration, media and careers. Write to us and the right person will reply by email." />
 
 			<section className="bg-paper py-16 lg:py-24">
 				<div className="container-page grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">

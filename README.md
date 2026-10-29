@@ -36,7 +36,7 @@ Pages sub-path. CI derives it from the repository name.
 | `src/data/image-sizes.json` | Pixel sizes of every optimised image (written by the image pipeline). |
 | `public/images/` | WebP images, each with a `-sm` variant for `srcset`. |
 | `src/routes/` | One file per page. Dynamic routes read their slug from the data. |
-| `src/components/` | Shared UI: page intro, section head, reveal, marquee, lightbox, gallery modal, navbar, footer. |
+| `src/components/` | Shared UI: page intro and header, circuit traces, section head, reveal, lightbox, gallery modal, navbar, footer. |
 | `src/lib/` | Config, EmailJS forms, URL allow-list, image helpers, SEO tags, scroll lock. |
 | `public/boot.js` | Runs before paint: enables reveal effects, the hydration failsafe and the Trusted Types policy. |
 | `react-router.config.ts` | `ssr: false` plus a prerender list built from the data. |
@@ -77,5 +77,6 @@ TLS-terminating proxy in front.
 ## Decisions
 
 - **Trusted Types, with one narrow policy.** Enforcing Trusted Types broke one thing in testing: on client-side navigation React DOM creates a `<script>` element by assigning the constant `<script></script>` to `innerHTML`, which happens when an open vacancy renders its JSON-LD. The `default` policy in `public/boot.js` allows exactly that constant and schema.org JSON-LD with no `<` in it, and returns `null` for anything else, so every other HTML sink stays blocked. Hydration, navigation, filters, the lightbox and the forms were all checked with it enforced.
-- **No CSS-in-JS or inline styles**, so `style-src 'self'` holds. The marquee speed, reveal delays and scroll lock all use classes.
+- **No CSS-in-JS or inline styles**, so `style-src 'self'` holds. Reveal delays, the trace drawing and the scroll lock all use classes.
+- **Visual identity.** Drawn from the IRIIC logo, not from any other site: light sky surfaces from the logo panel, the bulb's circuit traces and nodes as the recurring device, Bricolage Grotesque display type for the chunky letterforms, an orange highlighter stroke on the one word that matters, full-colour photographs in soft frames with sky and orange offset blocks, pill buttons, and the four-stage lab-to-market pipeline that is the institute's name.
 - **React Router 7, not 8**, as specified for this project.

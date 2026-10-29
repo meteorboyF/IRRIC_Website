@@ -21,7 +21,7 @@ export default function About() {
 
 			<section className="bg-paper py-24 lg:py-32" aria-labelledby="purpose">
 				<div className="container-page grid gap-12 lg:grid-cols-[1fr_1fr]">
-					<SectionHead number="01" id="purpose" eyebrow="Purpose" title="Why IRIIC exists" />
+					<SectionHead id="purpose" eyebrow="Purpose" title="Why IRIIC exists" />
 					<Reveal delay={1} className="prose-body">
 						<p>Bangladesh imports much of the technology it uses. IRIIC’s aim is to help the country build its own: to run research in Fourth Industrial Revolution technologies such as AI, the Internet of Things and brain–computer interfaces, to turn that research into products and intellectual property, and to train people who can lead that work.</p>
 						<p>It does this by putting UIU’s research labs, its innovation hub and two centres for policy and industry collaboration under one roof, and by working with companies, hospitals, government bodies and universities in Bangladesh and abroad.</p>
@@ -32,7 +32,7 @@ export default function About() {
 
 			<section className="border-y border-ink-900/8 bg-white py-24 lg:py-32" aria-labelledby="centres">
 				<div className="container-page">
-					<SectionHead number="02" id="centres" eyebrow="Structure" title="Five units, one institute" />
+					<SectionHead id="centres" eyebrow="Structure" title="Five units, one institute" />
 					<ul className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 						{centres.map((centre, index) => (
 							<Reveal as="li" key={centre.name} delay={(index % 3) as 0 | 1 | 2} className="card p-7">
@@ -53,7 +53,7 @@ export default function About() {
 
 			<section className="bg-paper py-24 lg:py-32" aria-labelledby="timeline">
 				<div className="container-page">
-					<SectionHead number="03" id="timeline" eyebrow="Timeline" title="How it came together" />
+					<SectionHead id="timeline" eyebrow="Timeline" title="How it came together" />
 					<ol className="mt-14 grid gap-6 border-l-2 border-ocean-200 pl-6 sm:pl-8">
 						{milestones.map((item, index) => (
 							<Reveal as="li" key={item.title} delay={(index % 3) as 0 | 1 | 2} className="relative">
@@ -68,27 +68,28 @@ export default function About() {
 			</section>
 
 			{director && (
-				<section className="on-dark band-dark grain py-24 lg:py-32" aria-labelledby="director">
+				<section className="surface-sky relative overflow-hidden py-24 lg:py-28" aria-labelledby="director">
 					<div className="container-page grid items-center gap-12 lg:grid-cols-[0.7fr_1.3fr]">
 						{director.image && (
-							<Reveal>
-								<ProjectImage image={director.image} sizes="(min-width: 1024px) 30vw, 80vw" className="mx-auto aspect-[4/5] max-w-sm rounded-2xl" />
+							<Reveal className="relative mx-auto w-full max-w-sm">
+								<div className="absolute -right-4 -bottom-4 h-full w-full rounded-[1.75rem] bg-ember-200" aria-hidden="true" />
+								<ProjectImage image={director.image} sizes="(min-width: 1024px) 30vw, 80vw" className="frame relative aspect-[4/5] shadow-card-lg" />
 							</Reveal>
 						)}
 						<Reveal delay={1}>
-							<p className="eyebrow">Director</p>
-							<h2 id="director" className="mt-3 font-display text-[clamp(2rem,4vw,3rem)] leading-[1.06] font-bold">
+							<p className="node-label mb-4">Director</p>
+							<h2 id="director" className="text-[clamp(2rem,4vw,3rem)]">
 								{director.name}
 							</h2>
-							<p className="mt-5 max-w-2xl leading-relaxed text-white/85">
+							<p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-700">
 								Founder and director of IRIIC and of AIMS Lab, and founder of CMED Health. He is Professor of Digital Health and Intelligent Technology in UIU’s Department of Computer Science and Engineering, and studied computer science at AUST and BUET before a PhD in computer science and medical engineering at the University of Southampton and postdoctoral research at the University of Toronto.
 							</p>
 							<div className="mt-8 flex flex-wrap gap-3">
-								<Link to={NAV.people.to} className="btn btn-ghost-dark">
+								<Link to={NAV.people.to} className="btn btn-primary">
 									{NAV.people.label}
 									<Icon name="arrow-right" className="h-4 w-4" />
 								</Link>
-								<SmartLink href="https://www.kmamun.com/" className="btn btn-ghost-dark">
+								<SmartLink href="https://www.kmamun.com/" className="btn btn-ghost">
 									Personal website
 									<Icon name="arrow-up-right" className="h-4 w-4" />
 								</SmartLink>

@@ -1,5 +1,5 @@
-import '@fontsource-variable/inter';
-import '@fontsource-variable/space-grotesk';
+import '@fontsource-variable/figtree';
+import '@fontsource-variable/bricolage-grotesque';
 import './app.css';
 import { useEffect, type ReactNode } from 'react';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, type LinksFunction } from 'react-router';

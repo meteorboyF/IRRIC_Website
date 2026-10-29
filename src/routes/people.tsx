@@ -1,4 +1,5 @@
 import { peopleGroups, people } from '../data/people';
+import { PageHeader } from '../components/PageHeader';
 import { CtaBand } from '../components/CtaBand';
 import { ProjectImage } from '../components/ProjectImage';
 import { Reveal } from '../components/Reveal';
@@ -17,13 +18,7 @@ const LEDES: Record<(typeof peopleGroups)[number], string | undefined> = {
 export default function People() {
 	return (
 		<>
-			<section className="on-dark band-dark grain pt-28 pb-14 lg:pb-16">
-				<div className="container-page max-w-4xl">
-					<p className="eyebrow">People</p>
-					<h1 className="mt-3 font-display text-[clamp(2.4rem,6vw,4.5rem)] leading-[1.02] font-bold">The people behind IRIIC</h1>
-					<p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/85">As listed on IRIIC’s team page.</p>
-				</div>
-			</section>
+			<PageHeader eyebrow="People" title="The people behind IRIIC" lede="The director, advisers, administration and research team, as listed on IRIIC’s team page." />
 			{peopleGroups.map((group, groupIndex) => {
 				const members = people.filter((person) => person.group === group);
 				if (members.length === 0) return null;
