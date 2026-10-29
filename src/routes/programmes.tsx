@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { projectBySlug } from '../data/projects';
 import { CtaBand } from '../components/CtaBand';
 import { Icon, type IconName } from '../components/Icon';
 import { PageIntro } from '../components/PageIntro';
@@ -9,6 +10,13 @@ import { NAV } from '../components/nav';
 import { seo } from '../lib/seo';
 
 export const meta = () => seo({ title: 'Programmes', description: 'How to work with IRIIC: startup incubation through LaunchPad, the Harvard HSIL Hackathon Dhaka hub, research collaboration with industry and government, training, and internships.', path: '/programmes/', image: 'hero/programmes' });
+
+/** Links to a project always carry that project's own title. */
+function projectLink(slug: string) {
+	const project = projectBySlug.get(slug);
+	if (!project) throw new Error(`Unknown project ${slug}`);
+	return { label: project.title, to: `/projects/${slug}/` };
+}
 
 interface Programme {
 	id: string;
@@ -31,8 +39,8 @@ const PROGRAMMES: Programme[] = [
 		points: ['National calls open to students, faculty and alumni of any university.', 'Teams of three to five, including at least one woman.', 'Months of mentorship and prototype support, ending in a pitch for seed or pre-seed funding.'],
 		who: 'Student and early-stage founding teams.',
 		links: [
-			{ label: 'LaunchPad cycle 1', to: '/projects/launchpad-cycle-1/' },
-			{ label: 'LaunchPad cycle 2', to: '/projects/launchpad-cycle-2/' }
+			projectLink('launchpad-cycle-1'),
+			projectLink('launchpad-cycle-2')
 		]
 	},
 	{
@@ -44,8 +52,8 @@ const PROGRAMMES: Programme[] = [
 		points: ['Hosted in 2025 and 2026.', 'Mentors from hospitals, government, industry and universities.', 'Winning teams join the HSIL venture-building track.'],
 		who: 'Students, clinicians, engineers, designers and early-stage startups.',
 		links: [
-			{ label: 'HSIL Hackathon 2026', to: '/projects/harvard-hsil-hackathon-2026/' },
-			{ label: 'HSIL Hackathon 2025', to: '/projects/harvard-hsil-hackathon-2025/' }
+			projectLink('harvard-hsil-hackathon-2026'),
+			projectLink('harvard-hsil-hackathon-2025')
 		]
 	},
 	{
@@ -57,8 +65,8 @@ const PROGRAMMES: Programme[] = [
 		points: ['Memoranda of understanding with companies and research centres.', 'Joint projects in digital health, BCI, NLP and energy.', 'Showcases and workshops for visiting delegations.'],
 		who: 'Companies, government bodies, NGOs and research institutions.',
 		links: [
-			{ label: 'Projects', to: NAV.projects.to },
-			{ label: 'Partners', to: NAV.partners.to }
+			{ label: NAV.projects.label, to: NAV.projects.to },
+			{ label: NAV.partners.label, to: NAV.partners.to }
 		]
 	},
 	{
@@ -70,8 +78,8 @@ const PROGRAMMES: Programme[] = [
 		points: ['AI Essentials for Capital Market Professionals, run with AI Forum Bangladesh in October 2025.', 'Innovation Talks with industry leaders.', 'UIU Research and Innovation Week, and the World IP Day seminar.'],
 		who: 'Organisations, students and the public.',
 		links: [
-			{ label: 'AI training for capital markets', to: '/projects/ai-essentials-capital-markets-2025/' },
-			{ label: 'Research and Innovation Week', to: '/projects/research-innovation-week-2024/' }
+			projectLink('ai-essentials-capital-markets-2025'),
+			projectLink('research-innovation-week-2024')
 		]
 	}
 ];
@@ -142,7 +150,7 @@ export default function Programmes() {
 								Email aimsl@uiu.ac.bd
 							</SmartLink>
 							<Link to={NAV.careers.to} className="btn btn-ghost btn-sm">
-								See open roles
+								{NAV.careers.label}
 							</Link>
 						</div>
 						<p className="mt-4 text-xs text-ink-600">Internship roles with deadlines are listed on the careers page.</p>

@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { centres } from '../data/about';
 import { partners } from '../data/partners';
 import { press } from '../data/press';
-import { projects } from '../data/projects';
+import { projectBySlug, projects } from '../data/projects';
 import { formatDeadline, openVacancies } from '../data/vacancies';
 import { Icon, type IconName } from '../components/Icon';
 import { Marquee } from '../components/Marquee';
@@ -61,7 +61,7 @@ export default function Home() {
 							{CTA.label}
 						</Link>
 						<Link to={NAV.projects.to} className="btn btn-ghost-dark">
-							Explore projects
+							{NAV.projects.label}
 							<Icon name="arrow-right" className="h-4 w-4" />
 						</Link>
 					</div>
@@ -101,7 +101,7 @@ export default function Home() {
 						))}
 					</ul>
 					<Link to={NAV.programmes.to} className="link mt-10 inline-flex items-center gap-1.5">
-						See how to work with each programme
+						{NAV.programmes.label}
 						<Icon name="arrow-right" className="h-4 w-4" />
 					</Link>
 				</div>
@@ -119,7 +119,7 @@ export default function Home() {
 						))}
 					</ul>
 					<Link to={NAV.projects.to} className="btn btn-primary mt-12">
-						See all {projects.length} projects
+						{NAV.projects.label}
 						<Icon name="arrow-right" className="h-4 w-4" />
 					</Link>
 				</div>
@@ -139,12 +139,16 @@ export default function Home() {
 								Since 2025 IRIIC has hosted the only Bangladesh hub of the Harvard T.H. Chan School of Public Health’s Health Systems Innovation Lab Hackathon, where teams build AI solutions for real health system problems.
 							</p>
 							<div className="mt-8 flex flex-wrap gap-3">
-								<Link to="/projects/harvard-hsil-hackathon-2026/" className="btn btn-ghost-dark">
-									HSIL Hackathon 2026
-								</Link>
-								<Link to="/projects/harvard-hsil-hackathon-2025/" className="btn btn-ghost-dark">
-									HSIL Hackathon 2025
-								</Link>
+								{['harvard-hsil-hackathon-2026', 'harvard-hsil-hackathon-2025'].map((slug) => {
+									const item = projectBySlug.get(slug);
+									return (
+										item && (
+											<Link key={slug} to={`/projects/${slug}/`} className="btn btn-ghost-dark">
+												{item.title}
+											</Link>
+										)
+									);
+								})}
 							</div>
 						</Reveal>
 						<Reveal delay={2} className="self-end">
@@ -177,7 +181,7 @@ export default function Home() {
 						))}
 					</ul>
 					<Link to={NAV.about.to} className="link mt-10 inline-flex items-center gap-1.5">
-						More about IRIIC
+						{NAV.about.label}
 						<Icon name="arrow-right" className="h-4 w-4" />
 					</Link>
 				</div>
@@ -199,7 +203,7 @@ export default function Home() {
 						</Marquee>
 					</div>
 					<Link to={NAV.partners.to} className="link mt-8 inline-flex items-center gap-1.5">
-						All partners
+						{NAV.partners.label}
 						<Icon name="arrow-right" className="h-4 w-4" />
 					</Link>
 				</div>
@@ -232,7 +236,7 @@ export default function Home() {
 							<p className="mt-4 max-w-md leading-relaxed text-ink-600">New roles are announced on IRIIC’s Facebook page. Past roles are kept on the careers page.</p>
 						)}
 						<Link to={NAV.careers.to} className="link mt-6 inline-flex items-center gap-1.5">
-							Go to careers
+							{NAV.careers.label}
 							<Icon name="arrow-right" className="h-4 w-4" />
 						</Link>
 					</Reveal>
@@ -253,7 +257,7 @@ export default function Home() {
 							))}
 						</ul>
 						<Link to={NAV.news.to} className="link mt-6 inline-flex items-center gap-1.5">
-							All news
+							{NAV.news.label}
 							<Icon name="arrow-right" className="h-4 w-4" />
 						</Link>
 					</Reveal>

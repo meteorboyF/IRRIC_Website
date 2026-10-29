@@ -77,7 +77,7 @@ export default function VacancyDetail() {
 				<div className="container-page">
 					<Link to={NAV.careers.to} className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">
 						<Icon name="arrow-left" className="h-4 w-4" />
-						All careers
+						{NAV.careers.label}
 					</Link>
 					<p className="eyebrow">{vacancy.project}</p>
 					<h1 className="mt-3 max-w-4xl font-display text-[clamp(2.2rem,5.5vw,4rem)] leading-[1.04] font-bold text-balance">{vacancy.title}</h1>

@@ -11,11 +11,12 @@ export const NAV = {
 	programmes: { to: '/programmes/', label: 'Programmes' },
 	careers: { to: '/careers/', label: 'Careers' },
 	news: { to: '/news/', label: 'News' },
-	contact: { to: '/contact/', label: 'Contact' },
+	// The contact page is also the single conversion CTA, so it has one name.
+	contact: { to: '/contact/', label: 'Work with IRIIC' },
 	privacy: { to: '/privacy/', label: 'Privacy' },
 	terms: { to: '/terms/', label: 'Terms' },
 	cookies: { to: '/cookies/', label: 'Cookies' }
 } as const;
 
-/** The single conversion CTA. */
-export const CTA = { to: '/contact/', label: 'Work with IRIIC' } as const;
+/** The single conversion CTA: the contact page, under its one name. */
+export const CTA = NAV.contact;

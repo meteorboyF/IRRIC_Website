@@ -73,8 +73,9 @@ function walk(dir, out = []) {
 
 const sha256 = (text) => `'sha256-${createHash('sha256').update(text, 'utf8').digest('base64')}'`;
 
-const SCRIPT_RE = /<script\b([^>]*)>([\s\S]*?)<\/script>/gi;
-const STYLE_RE = /<style\b[^>]*>([\s\S]*?)<\/style>/gi;
+// Closing tags may carry whitespace or junk before '>' ("</script >"); match them too.
+const SCRIPT_RE = /<script\b([^>]*)>([\s\S]*?)<\/script\b[^>]*>/gi;
+const STYLE_RE = /<style\b[^>]*>([\s\S]*?)<\/style\b[^>]*>/gi;
 const STYLE_ATTR_RE = /<[^>]+\sstyle\s*=\s*["'][^"']*["']/i;
 
 function policyFor(html, file) {

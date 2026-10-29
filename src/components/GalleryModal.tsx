@@ -47,7 +47,7 @@ export function GalleryModal({ project, onClose }: { project: Project; onClose: 
 						<div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-ink-900/10 pt-5">
 							<p className="text-sm text-ink-600">{photos.length > PREVIEW ? `Showing ${PREVIEW} of ${photos.length} photos. The rest are on the project page.` : 'Details, partners and links are on the project page.'}</p>
 							<Link to={`/projects/${project.slug}/`} className="btn btn-primary">
-								Read more about {project.title}
+								{project.title}
 								<Icon name="arrow-right" className="h-4 w-4" />
 							</Link>
 						</div>

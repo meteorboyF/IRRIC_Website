@@ -11,4 +11,10 @@ if (!file) {
 	console.error('usage: node scripts/run-ts.mjs <script.ts>');
 	process.exit(1);
 }
-await runnerImport(resolve(file), { configFile: false, logLevel: 'warn' });
+// Same build-time constants the app gets from vite.config.ts.
+const { buildDate, siteUrl } = (await runnerImport(resolve('scripts/env.ts'), { configFile: false, logLevel: 'warn' })).module;
+await runnerImport(resolve(file), {
+	configFile: false,
+	logLevel: 'warn',
+	define: { __BUILD_DATE__: JSON.stringify(buildDate), __SITE_URL__: JSON.stringify(siteUrl) }
+});

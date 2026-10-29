@@ -58,7 +58,7 @@ export function ErrorBoundary({ error }: { error: unknown }) {
 			<h1 className="mt-3 font-display text-4xl font-bold">{title}</h1>
 			<p className="mt-4 max-w-xl text-ink-600">Please try again, or go back to the home page.</p>
 			<a href={asset('')} className="btn btn-primary mt-8">
-				Go to the home page
+				Home
 			</a>
 		</section>
 	);

@@ -70,7 +70,7 @@ export default function Careers() {
 									<Icon name="arrow-up-right" className="h-4 w-4" />
 								</a>
 								<Link to={`${NAV.contact.to}?topic=careers`} className="btn btn-ghost">
-									Go to the contact form
+									{NAV.contact.label}
 								</Link>
 							</div>
 						</Reveal>

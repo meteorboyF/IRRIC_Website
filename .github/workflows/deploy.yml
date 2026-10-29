@@ -53,6 +53,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Security self-test
+        run: npm run test:security
+
       - name: Build (validates data first)
         env:
           # Public-by-design EmailJS identifiers. Unset secrets arrive as empty

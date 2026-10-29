@@ -6,7 +6,7 @@ import { Icon } from './Icon';
 import { CTA, NAV } from './nav';
 
 const ABOUT_MENU = [NAV.about, NAV.people, NAV.partners];
-const MAIN = [NAV.projects, NAV.programmes, NAV.careers, NAV.news, NAV.contact];
+const MAIN = [NAV.projects, NAV.programmes, NAV.careers, NAV.news];
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
 	`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-ink-50 hover:text-ink-900 ${isActive ? 'text-ocean-700' : 'text-ink-700'}`;
@@ -103,7 +103,7 @@ export function Navbar() {
 								{ABOUT_MENU.map((item) => (
 									<li key={item.to}>
 										<NavLink to={item.to} end className={({ isActive }) => `block rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-ink-50 ${isActive ? 'bg-ocean-50 text-ocean-800' : 'text-ink-700'}`}>
-											{item.to === NAV.about.to ? 'About IRIIC' : item.label}
+											{item.label}
 										</NavLink>
 									</li>
 								))}

@@ -85,7 +85,7 @@ export default function About() {
 							</p>
 							<div className="mt-8 flex flex-wrap gap-3">
 								<Link to={NAV.people.to} className="btn btn-ghost-dark">
-									Meet the team
+									{NAV.people.label}
 									<Icon name="arrow-right" className="h-4 w-4" />
 								</Link>
 								<SmartLink href="https://www.kmamun.com/" className="btn btn-ghost-dark">

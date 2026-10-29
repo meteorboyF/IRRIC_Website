@@ -63,7 +63,7 @@ export default function ProjectDetail() {
 				<div className="container-page relative z-10 pt-28 pb-12 lg:pb-16">
 					<Link to={NAV.projects.to} className="mb-7 inline-flex items-center gap-2 text-sm font-semibold text-white/80 hover:text-white">
 						<Icon name="arrow-left" className="h-4 w-4" />
-						All projects
+						{NAV.projects.label}
 					</Link>
 					<p className="eyebrow">
 						{project.type}

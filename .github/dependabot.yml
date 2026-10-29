@@ -8,6 +8,20 @@ updates:
     groups:
       minor-and-patch:
         update-types: [minor, patch]
+    ignore:
+      # The site is specified as React Router 7.
+      - dependency-name: 'react-router'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@react-router/*'
+        update-types: ['version-update:semver-major']
+      # eslint-plugin-react and eslint-plugin-jsx-a11y do not support ESLint 10 yet.
+      - dependency-name: 'eslint'
+        update-types: ['version-update:semver-major']
+      - dependency-name: '@eslint/js'
+        update-types: ['version-update:semver-major']
+      # typescript-eslint supports TypeScript below 6.1.
+      - dependency-name: 'typescript'
+        update-types: ['version-update:semver-major', 'version-update:semver-minor']
 
   - package-ecosystem: github-actions
     directory: /
@@ -18,3 +32,9 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    ignore:
+      # Stay on Node's active LTS line and nginx's stable (even-numbered) line.
+      - dependency-name: 'node'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'nginxinc/nginx-unprivileged'
+        update-types: ['version-update:semver-minor']

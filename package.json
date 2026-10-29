@@ -10,6 +10,7 @@
     "typecheck": "react-router typegen && tsc --noEmit",
     "lint": "eslint . --max-warnings 0",
     "validate": "node scripts/run-ts.mjs scripts/validate-data.ts",
+    "test:security": "node scripts/run-ts.mjs scripts/security-selftest.ts",
     "check:links": "node scripts/check-links.mjs",
     "preview": "node scripts/serve.mjs"
   },

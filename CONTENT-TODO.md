@@ -127,7 +127,23 @@ Not part of this site, but worth fixing at the source:
 - Theme demo pages (shop, cart, pricing, portfolio, "Dummy") are still public.
 - The investor page ends with "[email]" and "[website link]".
 
-## 7. Domain
+## 7. Repository security settings (only the owner can change these)
+
+GitHub → `meteorboyF/IRRIC_Website` → **Settings → Code security**:
+
+| Setting | Why |
+|---|---|
+| **Dependabot alerts: Enable** | Currently disabled. Version-update PRs are configured, but alerts for known vulnerabilities need this switch. |
+| **Secret scanning and push protection: Enable** | Blocks accidental pushes of credentials. The repo holds no secrets today. |
+| **Branch protection for `main`** (Settings → Branches) | Require the "Build, check and deploy" and CodeQL checks to pass on pull requests before merging. |
+
+Five Dependabot pull requests (#1 to #5) propose major upgrades the site
+deliberately does not take yet: React Router 8 (the site is specified as
+v7), ESLint 10 (its React and accessibility plugins do not support it yet),
+Node 26 (not an LTS release) and nginx 1.31 (mainline, not stable). They
+are now ignored in `.github/dependabot.yml`; close the open ones.
+
+## 8. Domain
 
 `SITE_URL` defaults to the GitHub Pages address. If IRIIC points a custom
 domain at this site, set the `SITE_URL` value in the deploy workflow (or a
