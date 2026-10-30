@@ -20,13 +20,13 @@ const LEDES: Record<(typeof partnerKinds)[number], string> = {
 	'Agreement partner': 'Organisations that have signed a memorandum of understanding with IRIIC.',
 	'Programme partner': 'Partners in programmes IRIIC hosts or runs.',
 	'Funder or government': 'Government bodies that fund or support IRIIC’s work.',
-	'Research collaborator': 'Institutions shown as partners on IRIIC’s project pages.'
+	'Research collaborator': 'Universities, hospitals and organisations that IRIIC’s research projects work with.'
 };
 
 export default function Partners() {
 	return (
 		<>
-			<PageIntro eyebrow="Partners" title="Who IRIIC works with" lede="Universities, hospitals, companies and government bodies, as documented in IRIIC’s agreements, programmes and project records." photo="hero/partners" photoAlt="Group photo of a World Bank delegation with UIU and IRIIC hosts" />
+			<PageIntro eyebrow="Partners" title="Who IRIIC works with" lede="Universities, hospitals, companies and government bodies in Bangladesh and abroad." photo="hero/partners" photoAlt="Group photo of a World Bank delegation with UIU and IRIIC hosts" />
 			{partnerKinds.map((kind, index) => {
 				const group = partners.filter((partner) => partner.kind === kind);
 				if (group.length === 0) return null;

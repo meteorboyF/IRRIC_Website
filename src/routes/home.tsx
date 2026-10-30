@@ -135,7 +135,7 @@ export default function Home() {
 			<section aria-label="IRIIC in numbers" className="bg-paper">
 				<dl className="container-page grid grid-cols-2 gap-y-8 py-14 lg:grid-cols-4">
 					{[
-						{ value: research, label: 'research and innovation projects documented' },
+						{ value: research, label: 'research and innovation projects' },
 						{ value: hackathons, label: 'Harvard HSIL Hackathons hosted as Bangladesh’s hub' },
 						{ value: agreements, label: 'signed partnership agreements' },
 						{ value: centres.length, label: 'labs and centres under one institute' }

@@ -139,7 +139,7 @@ export default function Programmes() {
 					<SectionHead id="internships" eyebrow="Internships" title="Internships at IRIIC" lede="IRIIC takes students and recent graduates on internships in AI and machine learning, brain–computer interfaces, natural language processing and health technology, with mentoring and weekly group meetings." />
 					<Reveal delay={1} className="card p-7">
 						<h3 className="font-display text-xl font-bold">How to apply</h3>
-						<p className="mt-2 text-sm leading-relaxed text-ink-600">IRIIC’s internship page asks applicants to:</p>
+						<p className="mt-2 text-sm leading-relaxed text-ink-600">To apply:</p>
 						<ol className="mt-4 list-decimal space-y-2 pl-5 leading-relaxed text-ink-700">
 							<li>Email a CV and cover letter to aimsl@uiu.ac.bd with the subject “Internship Application – [your field of interest]”.</li>
 							<li>Attend an interview if shortlisted.</li>

@@ -26,22 +26,22 @@ export const partners: Partner[] = [
 	{ name: 'CMED Health', logo: 'partners/cmed-health', kind: 'Programme partner', note: 'Commercialised CMED; AI health partner for HSIL 2026; collaborator on several projects.', sources: [`${WEB}/about-us/`, `${WEB}/cmed/`] },
 
 	// ---- research collaborators shown on project pages ----
-	{ name: 'University of Toronto', logo: 'partners/university-of-toronto', kind: 'Research collaborator', note: 'Shown on Autism Barta, Bolte Chai, CKD, Focus Mind, iCRP, MindWave Analytics and PVDoctor.', sources: [`${WEB}/autism-barta/`, `${WEB}/pvdoctor/`] },
-	{ name: 'Imperial College London', logo: 'partners/imperial-college-london', kind: 'Research collaborator', note: 'Shown on AIMScribe, Focus Mind, MindWave Analytics and PVDoctor.', sources: [`${WEB}/aimscribe/`, `${WEB}/focus-mind/`] },
-	{ name: 'Rutgers University', logo: 'partners/rutgers', kind: 'Research collaborator', note: 'Shown on AIMScribe, CKD and iCRP.', sources: [`${WEB}/ckd/`, `${WEB}/icrp/`] },
-	{ name: 'Penn State', logo: 'partners/penn-state', kind: 'Research collaborator', note: 'Shown on MindWave Analytics.', sources: [`${WEB}/mindwave-analytics/`] },
-	{ name: 'Deakin University', logo: 'partners/deakin-university', kind: 'Research collaborator', note: 'Shown on AIMScribe.', sources: [`${WEB}/aimscribe/`] },
-	{ name: 'North South University', logo: 'partners/north-south-university', kind: 'Research collaborator', note: 'Shown on AI Reception and AIMScribe.', sources: [`${WEB}/ai-reception/`, `${WEB}/aimscribe/`] },
-	{ name: 'University of Liberal Arts Bangladesh', logo: 'partners/ulab', kind: 'Research collaborator', note: 'Shown on AI Reception and Deep Depression.', sources: [`${WEB}/ai-reception/`, `${WEB}/deep-depression/`] },
-	{ name: 'Independent University, Bangladesh', logo: 'partners/iub', kind: 'Research collaborator', note: 'Shown on Deep Depression.', sources: [`${WEB}/deep-depression/`] },
-	{ name: 'Institute of Business Administration, University of Dhaka', logo: 'partners/iba-du', kind: 'Research collaborator', note: 'Shown on MindWave Analytics.', sources: [`${WEB}/mindwave-analytics/`] },
-	{ name: 'National Institute of Mental Health and Hospital', logo: 'partners/nimh', kind: 'Research collaborator', note: 'Shown on Deep Depression.', sources: [`${WEB}/deep-depression/`] },
-	{ name: 'Holland Bloorview Kids Rehabilitation Hospital', logo: 'partners/holland-bloorview', kind: 'Research collaborator', note: 'Shown on Autism Barta and Bolte Chai.', sources: [`${WEB}/autism-barta/`, `${WEB}/bolte-chai/`] },
-	{ name: 'Tauri Foundation', logo: 'partners/tauri-foundation', kind: 'Research collaborator', note: 'Shown on Bolte Chai.', sources: [`${WEB}/bolte-chai/`] },
-	{ name: 'Palli Karma-Sahayak Foundation (PKSF)', logo: 'partners/pksf', kind: 'Research collaborator', note: 'Shown on CMED.', sources: [`${WEB}/cmed/`] },
-	{ name: 'Community Oncology Centre', logo: 'partners/community-oncology-centre', kind: 'Research collaborator', note: 'Shown on CanAware.', sources: [`${WEB}/canaware/`] },
-	{ name: 'OpenBCI', logo: 'partners/openbci', kind: 'Research collaborator', note: 'Shown on Concentrate Today.', sources: [`${WEB}/concentrate-today/`] },
-	{ name: 'BrainCo', logo: 'partners/brainco', kind: 'Research collaborator', note: 'Shown on Focus Mind.', sources: [`${WEB}/focus-mind/`] }
+	{ name: 'University of Toronto', logo: 'partners/university-of-toronto', kind: 'Research collaborator', note: 'Research partner on Autism Barta, Bolte Chai, CKD, Focus Mind, iCRP, MindWave Analytics and PVDoctor.', sources: [`${WEB}/autism-barta/`, `${WEB}/pvdoctor/`] },
+	{ name: 'Imperial College London', logo: 'partners/imperial-college-london', kind: 'Research collaborator', note: 'Research partner on AIMScribe, Focus Mind, MindWave Analytics and PVDoctor.', sources: [`${WEB}/aimscribe/`, `${WEB}/focus-mind/`] },
+	{ name: 'Rutgers University', logo: 'partners/rutgers', kind: 'Research collaborator', note: 'Research partner on AIMScribe, CKD and iCRP.', sources: [`${WEB}/ckd/`, `${WEB}/icrp/`] },
+	{ name: 'Penn State', logo: 'partners/penn-state', kind: 'Research collaborator', note: 'Research partner on MindWave Analytics.', sources: [`${WEB}/mindwave-analytics/`] },
+	{ name: 'Deakin University', logo: 'partners/deakin-university', kind: 'Research collaborator', note: 'Research partner on AIMScribe.', sources: [`${WEB}/aimscribe/`] },
+	{ name: 'North South University', logo: 'partners/north-south-university', kind: 'Research collaborator', note: 'Research partner on AI Reception and AIMScribe.', sources: [`${WEB}/ai-reception/`, `${WEB}/aimscribe/`] },
+	{ name: 'University of Liberal Arts Bangladesh', logo: 'partners/ulab', kind: 'Research collaborator', note: 'Research partner on AI Reception and Deep Depression.', sources: [`${WEB}/ai-reception/`, `${WEB}/deep-depression/`] },
+	{ name: 'Independent University, Bangladesh', logo: 'partners/iub', kind: 'Research collaborator', note: 'Research partner on Deep Depression.', sources: [`${WEB}/deep-depression/`] },
+	{ name: 'Institute of Business Administration, University of Dhaka', logo: 'partners/iba-du', kind: 'Research collaborator', note: 'Research partner on MindWave Analytics.', sources: [`${WEB}/mindwave-analytics/`] },
+	{ name: 'National Institute of Mental Health and Hospital', logo: 'partners/nimh', kind: 'Research collaborator', note: 'Research partner on Deep Depression.', sources: [`${WEB}/deep-depression/`] },
+	{ name: 'Holland Bloorview Kids Rehabilitation Hospital', logo: 'partners/holland-bloorview', kind: 'Research collaborator', note: 'Research partner on Autism Barta and Bolte Chai.', sources: [`${WEB}/autism-barta/`, `${WEB}/bolte-chai/`] },
+	{ name: 'Tauri Foundation', logo: 'partners/tauri-foundation', kind: 'Research collaborator', note: 'Research partner on Bolte Chai.', sources: [`${WEB}/bolte-chai/`] },
+	{ name: 'Palli Karma-Sahayak Foundation (PKSF)', logo: 'partners/pksf', kind: 'Research collaborator', note: 'Research partner on CMED.', sources: [`${WEB}/cmed/`] },
+	{ name: 'Community Oncology Centre', logo: 'partners/community-oncology-centre', kind: 'Research collaborator', note: 'Research partner on CanAware.', sources: [`${WEB}/canaware/`] },
+	{ name: 'OpenBCI', logo: 'partners/openbci', kind: 'Research collaborator', note: 'Research partner on Concentrate Today.', sources: [`${WEB}/concentrate-today/`] },
+	{ name: 'BrainCo', logo: 'partners/brainco', kind: 'Research collaborator', note: 'Research partner on Focus Mind.', sources: [`${WEB}/focus-mind/`] }
 ];
 
 export const partnerKinds = ['Agreement partner', 'Programme partner', 'Funder or government', 'Research collaborator'] as const;

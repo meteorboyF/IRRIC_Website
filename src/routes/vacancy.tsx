@@ -100,21 +100,23 @@ export default function VacancyDetail() {
 					<Reveal>
 						{!open && (
 							<p className="mb-8 rounded-xl border border-ink-900/12 bg-paper-deep p-4 text-sm font-medium text-ink-800" role="note">
-								This role has closed and is no longer accepting applications. It is kept here for reference.
+								This role has closed and is no longer accepting applications.
 							</p>
 						)}
 						{vacancy.about && <p className="text-lg leading-relaxed text-ink-700">{vacancy.about}</p>}
-						<Section title="What you will do" items={vacancy.responsibilities} />
-						<Section title="What the post asks for" items={vacancy.requirements} />
+						<Section title="Responsibilities" items={vacancy.responsibilities} />
+						<Section title="Requirements" items={vacancy.requirements} />
 					</Reveal>
 
 					<Reveal delay={1}>
 						<aside className="card sticky top-24 p-6" aria-labelledby="apply-heading">
 							<dl className="grid gap-4">
-								<div>
-									<dt className="eyebrow">Deadline</dt>
-									<dd className="mt-1 font-display text-xl font-bold">{vacancy.deadline ? formatDeadline(vacancy.deadline) : 'Not stated in the post'}</dd>
-								</div>
+								{vacancy.deadline && (
+									<div>
+										<dt className="eyebrow">Deadline</dt>
+										<dd className="mt-1 font-display text-xl font-bold">{formatDeadline(vacancy.deadline)}</dd>
+									</div>
+								)}
 								{vacancy.postedLabel && (
 									<div className="border-t border-ink-900/8 pt-4">
 										<dt className="eyebrow">Posted</dt>
@@ -146,13 +148,12 @@ export default function VacancyDetail() {
 									)}
 								</>
 							) : (
-								<p className="mt-3 text-sm leading-relaxed text-ink-700">Applications have closed. Watch the careers page for new roles.</p>
+								<p className="mt-3 text-sm leading-relaxed text-ink-700">Applications have closed. New roles are listed on the careers page.</p>
 							)}
 							<SmartLink href={vacancy.sourceUrl} className="link mt-5 inline-flex items-center gap-1.5 text-sm">
-								Read the original post
+								Original announcement
 								<Icon name="arrow-up-right" className="h-4 w-4" />
 							</SmartLink>
-							<p className="mt-5 text-xs leading-relaxed text-ink-600">This site does not collect applications or CVs. Apply only through the route the original post gives.</p>
 						</aside>
 					</Reveal>
 				</div>

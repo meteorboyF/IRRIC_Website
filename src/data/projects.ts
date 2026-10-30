@@ -53,7 +53,7 @@ export const projects: Project[] = [
 			'Diagram of CMED linking sensors, health workers, an AI cloud, doctors and hospitals'
 		]),
 		links: [
-			{ label: 'Project page on the previous IRIIC site', url: `${WEB}/cmed/` },
+			{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/cmed/` },
 			{ label: 'Research paper (2016)', url: 'https://doi.org/10.1016/j.compeleceng.2016.02.005' }
 		],
 		featured: true,
@@ -90,7 +90,7 @@ export const projects: Project[] = [
 			'SmartEndo screen asking about pain levels',
 			'Diagram of SmartEndo linking self-screening, the cloud, risk levels and referral'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/smartendo/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/smartendo/` }],
 		featured: true,
 		sources: [`${WEB}/smartendo/`, `${WEB}/mou-between-iriicuiu-and-esb-incepta-pharmaceuticals-ltd-2/`, `${WEB}/team-nurix-team-smartendo-becomes-the-champion-of-the-inaugural-harvard-hsil-hackathon-2025/`, `${FB} (BEAR Summit, Addis Ababa posts)`]
 	},
@@ -108,7 +108,7 @@ export const projects: Project[] = [
 			'Confidential Bangla chatbot for sexual and reproductive health, rights and mental health questions.',
 			'Education, screening and referral features in one app.',
 			'Validated for clinical, cultural and inclusion considerations.',
-			'Funded by the Bill & Melinda Gates Foundation, according to the dissemination report.'
+			'Funded by the Bill & Melinda Gates Foundation.'
 		],
 		partners: ['Bill & Melinda Gates Foundation (funding)', 'CMED Health'],
 		outcomes: [
@@ -126,7 +126,7 @@ export const projects: Project[] = [
 			'SuSastho.AI chat screen with a Bangla keyboard'
 		]),
 		links: [
-			{ label: 'Project page on the previous IRIIC site', url: `${WEB}/susastho-ai/` },
+			{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/susastho-ai/` },
 			{ label: 'The Daily Star: Africa’s AI movement and what Bangladesh can learn', url: 'https://www.thedailystar.net/next-step/news/africas-ai-movement-and-what-bangladesh-can-learn-3904761' }
 		],
 		featured: true,
@@ -156,7 +156,7 @@ export const projects: Project[] = [
 			'Diagram of an integrated telemedicine hub for doctor–patient interaction'
 		]),
 		links: [
-			{ label: 'Project page on the previous IRIIC site', url: `${WEB}/aimscribe/` },
+			{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/aimscribe/` },
 			{ label: 'Open roles on this project', url: '/careers/' }
 		],
 		featured: true,
@@ -209,7 +209,7 @@ export const projects: Project[] = [
 			'Diagram of the BCI neuromarketing pipeline from signal acquisition to prediction'
 		]),
 		links: [
-			{ label: 'Project page on the previous IRIIC site', url: `${WEB}/mindwave-analytics/` },
+			{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/mindwave-analytics/` },
 			{ label: 'Research paper (2023)', url: 'https://doi.org/10.1007/978-981-19-8032-9_3' }
 		],
 		featured: true,
@@ -241,7 +241,7 @@ export const projects: Project[] = [
 			'AI Reception robot with uses for education, hospitals, banks and offices',
 			'Workflow of AI Reception: face recognition, speech recognition, conversation agent and text to speech'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/ai-reception/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/ai-reception/` }],
 		featured: true,
 		sources: [`${WEB}/ai-reception/`, `${WEB}/achievements/`, `${WEB}/world-bank-delegation-visits-iriic-at-uiu-to-explore-innovation-and-entrepreneurship-in-bangladesh/`]
 	},
@@ -273,7 +273,7 @@ export const projects: Project[] = [
 			'Diagram of the Deep Depression pipeline from EEG signal to classification'
 		]),
 		links: [
-			{ label: 'Project page on the previous IRIIC site', url: `${WEB}/deep-depression/` },
+			{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/deep-depression/` },
 			{ label: 'Systematic review (2022)', url: 'https://doi.org/10.1109/ACCESS.2022.3146711' }
 		],
 		sources: [`${WEB}/deep-depression/`, `${WEB}/achievements/`, `${FB} (India AI Impact Summit post)`]
@@ -303,7 +303,7 @@ export const projects: Project[] = [
 			'Virtual Eye Doc app screen with instructions in Bangla',
 			'Virtual Eye Doc web dashboard listing doctors'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/virtual-eye-doc/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/virtual-eye-doc/` }],
 		sources: [`${WEB}/virtual-eye-doc/`]
 	},
 	{
@@ -333,7 +333,7 @@ export const projects: Project[] = [
 			'Bolte Chai app showing a kitten photo used as a picture prompt',
 			'Bolte Chai dashboard with daily usage charts'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/bolte-chai/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/bolte-chai/` }],
 		sources: [`${WEB}/bolte-chai/`, `${WEB}/achievements/`]
 	},
 	{
@@ -364,7 +364,7 @@ export const projects: Project[] = [
 			'Autism Barta website sign-in page',
 			'Diagram of Autism Barta screening by parents and health workers, with referral'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/autism-barta/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/autism-barta/` }],
 		sources: [`${WEB}/autism-barta/`, `${WEB}/achievements/`]
 	},
 	{
@@ -393,7 +393,7 @@ export const projects: Project[] = [
 		gallery: gallery('pvdoctor', [
 			'Diagram of PVDoctor recording voice and tremor on a phone and sending it to a cloud for analysis'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/pvdoctor/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/pvdoctor/` }],
 		sources: [`${WEB}/pvdoctor/`, `${WEB}/achievements/`]
 	},
 	{
@@ -424,7 +424,7 @@ export const projects: Project[] = [
 		],
 			'cover'
 		),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/focus-mind/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/focus-mind/` }],
 		sources: [`${WEB}/focus-mind/`, 'https://www.tbsnews.net/economy/corporates/countrys-first-brain-computer-interface-bci-research-lab-launched-uiu-342919']
 	},
 	{
@@ -449,7 +449,7 @@ export const projects: Project[] = [
 			'Diagram of the Concentrate Today experimental setup across training sessions',
 			'Diagram of the Concentrate Today study methodology'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/concentrate-today/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/concentrate-today/` }],
 		sources: [`${WEB}/concentrate-today/`]
 	},
 	{
@@ -472,7 +472,7 @@ export const projects: Project[] = [
 		gallery: gallery('symptom-checker', [
 			'SymptomSense poster on AI-driven primary health care decisions'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/symptom-checker/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/symptom-checker/` }],
 		sources: [`${WEB}/symptom-checker/`]
 	},
 	{
@@ -496,7 +496,7 @@ export const projects: Project[] = [
 			'Diagram of the AI prescription audit workflow'
 		]),
 		links: [
-			{ label: 'Project page on the previous IRIIC site', url: `${WEB}/ai-based-prescription-audit-system/` },
+			{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/ai-based-prescription-audit-system/` },
 			{ label: 'Try the demo', url: 'https://dosage.iriic.uiu.ac.bd/' }
 		],
 		sources: [`${WEB}/ai-based-prescription-audit-system/`]
@@ -519,7 +519,7 @@ export const projects: Project[] = [
 			'iCRP dashboard with pie charts of risk factors',
 			'Diagram of the iCRP platform data flow from devices to the cloud'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/icrp/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/icrp/` }],
 		sources: [`${WEB}/icrp/`]
 	},
 	{
@@ -540,7 +540,7 @@ export const projects: Project[] = [
 			'CKD dashboard with pie charts of risk factors',
 			'Diagram of the CKD research process from data collection to clinical validation'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/ckd/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/ckd/` }],
 		sources: [`${WEB}/ckd/`]
 	},
 	{
@@ -563,7 +563,7 @@ export const projects: Project[] = [
 			'Cog-i result screen showing a low-risk outcome and referral buttons',
 			'Diagram of Cog-i screening, awareness and referral for older people in Bangladesh'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/cog-i/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/cog-i/` }],
 		sources: [`${WEB}/cog-i/`]
 	},
 	{
@@ -583,7 +583,7 @@ export const projects: Project[] = [
 			'CanAware app sign-in and home screens',
 			'CanAware app questionnaire screens'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/canaware/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/canaware/` }],
 		sources: [`${WEB}/canaware/`]
 	},
 	{
@@ -602,7 +602,7 @@ export const projects: Project[] = [
 			'Diagram of the proposed teledentistry model in Bangladesh linking people, health workers and dentists',
 			'Graphic of barriers to dental care, such as cost and lack of awareness'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/access-teledentistry/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/access-teledentistry/` }],
 		sources: [`${WEB}/access-teledentistry/`]
 	},
 	{
@@ -615,7 +615,7 @@ export const projects: Project[] = [
 		sortKey: 0,
 		summary:
 			'Virtual Hospital is an intelligent home health monitoring and referral system that connects connected devices at home to clinicians, so patients can be watched over and referred without travelling.',
-		highlights: ['Home monitoring with connected devices.', 'Referral to clinicians when readings need attention.', 'The project lists health-data standards it follows, including HL7 and FHIR.'],
+		highlights: ['Home monitoring with connected devices.', 'Referral to clinicians when readings need attention.', 'Follows health-data standards including HL7 and FHIR.'],
 		image: cover('virtual-hospital', 'Patient in a video consultation with a doctor on a laptop', 'cover'),
 		gallery: gallery('virtual-hospital', [
 			'Virtual Hospital app and dashboard screens with live health readings',
@@ -623,7 +623,7 @@ export const projects: Project[] = [
 			'Virtual Hospital web dashboard with status panels',
 			'Diagram of the Virtual Hospital system linking patients, hospitals and specialists'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/virtual-hospital/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/virtual-hospital/` }],
 		sources: [`${WEB}/virtual-hospital/`]
 	},
 	{
@@ -644,7 +644,7 @@ export const projects: Project[] = [
 			'i Power graphic of the benefits of better demand forecasting',
 			'i Power diagram of data sources and the AI engine'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/i_power/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/i_power/` }],
 		sources: [`${WEB}/i_power/`, `${WEB}/achievements/`]
 	},
 	{
@@ -667,7 +667,7 @@ export const projects: Project[] = [
 			'What’s Next web form with study preference questions',
 			'Graphic of the themes behind What’s Next, from data collection to recommendations'
 		]),
-		links: [{ label: 'Project page on the previous IRIIC site', url: `${WEB}/whats-next/` }],
+		links: [{ label: 'Project page on iriic.uiu.ac.bd', url: `${WEB}/whats-next/` }],
 		sources: [`${WEB}/whats-next/`]
 	},
 	{
@@ -709,7 +709,7 @@ export const projects: Project[] = [
 		image: cover('harvard-hsil-hackathon-2026', 'HSIL Hackathon seventh edition poster listing the global hubs and partners', 'cover'),
 		links: [
 			{ label: 'New Age: UIU holds HSIL Hackathon 2026', url: 'https://www.newagebd.net/post/campus-bites/297361/uiu-holds-hsil-hackathon-2026' },
-			{ label: 'Hackathon page on the previous IRIIC site', url: `${WEB}/harvard-hsil-hackthon-2026/` }
+			{ label: 'Hackathon page on iriic.uiu.ac.bd', url: `${WEB}/harvard-hsil-hackthon-2026/` }
 		],
 		featured: true,
 		sources: [`${WEB}/harvard-hsil-hackthon-2026/`, `${WEB}/selected-participants-list-hsil-2026/`, 'https://www.newagebd.net/post/campus-bites/297361/uiu-holds-hsil-hackathon-2026', `${FB} (HSIL 2026 posts)`]
@@ -748,7 +748,7 @@ export const projects: Project[] = [
 		links: [
 			{ label: 'The Business Standard: UIU became first-ever Bangladesh hub', url: 'https://www.tbsnews.net/economy/corporates/uiu-became-first-ever-bangladesh-hub-harvard-hsil-hackathon-2025-1090151' },
 			{ label: 'The Daily Star: winners honoured at IRIIC', url: 'https://www.thedailystar.net/campus/noticeboard/news/winners-honoured-iriic-uiu-the-dhaka-hub-the-harvard-hsil-hackathon-2025-3875666' },
-			{ label: 'Hackathon page on the previous IRIIC site', url: `${WEB}/harvard-hsil-hackthon-2025/` }
+			{ label: 'Hackathon page on iriic.uiu.ac.bd', url: `${WEB}/harvard-hsil-hackthon-2025/` }
 		],
 		featured: true,
 		sources: [`${WEB}/harvard-hsil-hackthon-2025/`, `${WEB}/team-nurix-team-smartendo-becomes-the-champion-of-the-inaugural-harvard-hsil-hackathon-2025/`, 'https://www.tbsnews.net/economy/corporates/uiu-became-first-ever-bangladesh-hub-harvard-hsil-hackathon-2025-1090151', `${FB} (HSIL 2025 posts)`]
@@ -766,7 +766,7 @@ export const projects: Project[] = [
 		highlights: ['Panellists included Wu Jianbo (PATH, China) and Md. Shadman Sakib (Sheba Platform), among others.', 'Questions covered priority AI applications, data governance and privacy, and the investment needed for health AI.'],
 		partners: ['PATH'],
 		image: cover('strategy-dialogue-ai-life-sciences-2025', 'Poster for the strategy dialogue on AI in life sciences'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/unlocking-ais-potential-in-life-sciences-strategy-dialogue-highlights-innovation-at-harvard-hsil-hackathon-2025-bangladesh-round/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/unlocking-ais-potential-in-life-sciences-strategy-dialogue-highlights-innovation-at-harvard-hsil-hackathon-2025-bangladesh-round/` }],
 		sources: [`${WEB}/strategy-dialogue-on-unlocking-ais-potential-in-life-sciences/`, `${WEB}/unlocking-ais-potential-in-life-sciences-strategy-dialogue-highlights-innovation-at-harvard-hsil-hackathon-2025-bangladesh-round/`]
 	},
 	{
@@ -837,7 +837,7 @@ export const projects: Project[] = [
 			'Guests in discussion around a meeting table',
 			'Guests watching a project demonstration'
 		], 'cover'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/2025-innovation-conclave-at-iriic-accelerating-bangladesh-2-0-through-research-to-commercialization/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/2025-innovation-conclave-at-iriic-accelerating-bangladesh-2-0-through-research-to-commercialization/` }],
 		sources: [`${WEB}/2025-innovation-conclave-at-iriic-accelerating-bangladesh-2-0-through-research-to-commercialization/`, `${WEB}/innovation-conclave/`]
 	},
 	{
@@ -859,7 +859,7 @@ export const projects: Project[] = [
 			'The training room from the back, with participants at tables',
 			'A participant presenting during the training'
 		], 'cover'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/lankabangla-securities-participates-in-bangladeshs-first-real-life-ai-training-for-capital-market-professionals-at-iriic-uiu/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/lankabangla-securities-participates-in-bangladeshs-first-real-life-ai-training-for-capital-market-professionals-at-iriic-uiu/` }],
 		sources: [`${WEB}/lankabangla-securities-participates-in-bangladeshs-first-real-life-ai-training-for-capital-market-professionals-at-iriic-uiu/`]
 	},
 	{
@@ -881,7 +881,7 @@ export const projects: Project[] = [
 			'Students in the audience at the workshop',
 			'A speaker presenting into a microphone'
 		], 'cover'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/empowering-womens-health-with-ai-endometriosis-awareness-screening-workshop-held-at-kumudini-womens-medical-college/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/empowering-womens-health-with-ai-endometriosis-awareness-screening-workshop-held-at-kumudini-womens-medical-college/` }],
 		sources: [`${WEB}/empowering-womens-health-with-ai-endometriosis-awareness-screening-workshop-held-at-kumudini-womens-medical-college/`]
 	},
 	{
@@ -904,7 +904,7 @@ export const projects: Project[] = [
 			'A speaker presenting a slide on innovation and IP',
 			'Speakers and organisers in front of the seminar banner'
 		], 'cover'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/irric-celebrates-creativity-and-innovation-on-world-intellectual-property-day-2025/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/irric-celebrates-creativity-and-innovation-on-world-intellectual-property-day-2025/` }],
 		sources: [`${WEB}/irric-celebrates-creativity-and-innovation-on-world-intellectual-property-day-2025/`, `${FB} (World IP Day posts)`]
 	},
 	{
@@ -931,7 +931,7 @@ export const projects: Project[] = [
 		],
 			'cover'
 		),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/world-bank-delegation-visits-iriic-at-uiu-to-explore-innovation-and-entrepreneurship-in-bangladesh/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/world-bank-delegation-visits-iriic-at-uiu-to-explore-innovation-and-entrepreneurship-in-bangladesh/` }],
 		sources: [`${WEB}/world-bank-delegation-visits-iriic-at-uiu-to-explore-innovation-and-entrepreneurship-in-bangladesh/`, `${WEB}/world-bank-visits-uihpuiu/`]
 	},
 	{
@@ -952,7 +952,7 @@ export const projects: Project[] = [
 			'A visitor trying a headset at an interactive kiosk',
 			'Visitors in front of the Smart Unbayon display'
 		], 'cover'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/prof-osama-khandeputy-vice-chancellor-academic-at-aston-university-uk-visits-iriic-at-uiu-applauds-bangladeshs-innovation-momentum/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/prof-osama-khandeputy-vice-chancellor-academic-at-aston-university-uk-visits-iriic-at-uiu-applauds-bangladeshs-innovation-momentum/` }],
 		sources: [`${WEB}/prof-osama-khandeputy-vice-chancellor-academic-at-aston-university-uk-visits-iriic-at-uiu-applauds-bangladeshs-innovation-momentum/`]
 	},
 	{
@@ -967,7 +967,7 @@ export const projects: Project[] = [
 			'An Innovation Talks session in the Smart Auditorium of UIU’s Innovation Hub with Imadur Rahman, Managing Director and CEO of Bangladesh Satellite Company Limited and a former principal researcher at Ericsson Research, on the present and future of the country’s satellite industry.',
 		partners: ['Bangladesh Satellite Company Limited'],
 		image: cover('innovation-talks-satellite-2025', 'Poster for the Innovation Talks session on the Bangladeshi satellite industry'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/innovation-talks-with-imadur-rahman-a-visionary-outlook-on-bangladeshs-satellite-industry/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/innovation-talks-with-imadur-rahman-a-visionary-outlook-on-bangladeshs-satellite-industry/` }],
 		sources: [`${WEB}/innovation-talks-with-imadur-rahman-a-visionary-outlook-on-bangladeshs-satellite-industry/`]
 	},
 	{
@@ -986,7 +986,7 @@ export const projects: Project[] = [
 			'Speakers and guests in a group photo on stage',
 			'A guest being welcomed with flowers in front of the event banner'
 		], 'cover'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/uiu-launches-research-and-innovation-week-with-seminar-2/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/uiu-launches-research-and-innovation-week-with-seminar-2/` }],
 		sources: [`${WEB}/invitation-to-uiu-research-innovation-week-special-session-with-prof-m-zahid-hasan/`, `${WEB}/day-01-research-innovation-week/`, `${WEB}/day-03-research-innovation-week/`, `${WEB}/uiu-launches-research-and-innovation-week-with-seminar-2/`]
 	},
 	{
@@ -1000,7 +1000,7 @@ export const projects: Project[] = [
 			'A delegation from the Ministry of Water Resources, led by Additional Secretary (Administration) Abdul Latif Molla, visited IRIIC for a workshop on the use of the Internet of Things in modern governance, focused on flood prediction, riverbank erosion monitoring and better water resource data.',
 		partners: ['Ministry of Water Resources, Government of Bangladesh'],
 		image: cover('water-resources-iot-workshop', 'Poster for the Ministry of Water Resources visit and IoT workshop'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/delegation-from-the-ministry-of-water-resources-visits-uiu/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/delegation-from-the-ministry-of-water-resources-visits-uiu/` }],
 		sources: [`${WEB}/delegation-from-the-ministry-of-water-resources-visits-uiu/`]
 	},
 	{
@@ -1016,7 +1016,7 @@ export const projects: Project[] = [
 		gallery: gallery('dhaka-university-vc-visit', [
 			'Guests and hosts in conversation in the IRIIC office'
 		], 'cover'),
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/prof-dr-niaz-ahmed-khan-visits-iriic-and-aims-lab-at-uiu/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/prof-dr-niaz-ahmed-khan-visits-iriic-and-aims-lab-at-uiu/` }],
 		sources: [`${WEB}/prof-dr-niaz-ahmed-khan-visits-iriic-and-aims-lab-at-uiu/`]
 	},
 	{
@@ -1029,7 +1029,7 @@ export const projects: Project[] = [
 		sortKey: 20240300,
 		summary:
 			'IRIIC hosted the sixth Youth Co:Lab Springboard Programme, which offered young entrepreneurs mentorship, networking and skills workshops to refine ideas with social and sustainable impact.',
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/youth-colab-springboard-program-6-0-2/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/youth-colab-springboard-program-6-0-2/` }],
 		sources: [`${WEB}/youth-colab-springboard-program-6-0-2/`]
 	},
 	{
@@ -1041,7 +1041,7 @@ export const projects: Project[] = [
 		dateLabel: '1 August 2023',
 		sortKey: 20230801,
 		summary: 'A seminar at the University Innovation Hub in which consultant Nitin Kumar shared design-thinking methods for understanding and connecting with customers, aimed mainly at students.',
-		links: [{ label: 'Report on the previous IRIIC site', url: `${WEB}/design-thinking-for-connecting-your-customers-2/` }],
+		links: [{ label: 'Report on iriic.uiu.ac.bd', url: `${WEB}/design-thinking-for-connecting-your-customers-2/` }],
 		sources: [`${WEB}/design-thinking-for-connecting-your-customers-2/`]
 	},
 
@@ -1056,7 +1056,7 @@ export const projects: Project[] = [
 		sortKey: 20241029,
 		summary: 'IRIIC and Onnorokom EdTech Ltd signed a memorandum of understanding at UIU to collaborate on research, development and commercialisation in educational technology.',
 		partners: ['Onnorokom EdTech Ltd'],
-		links: [{ label: 'Announcement on the previous IRIIC site', url: `${WEB}/mou-between-iriicuiu-and-onnorokom-edtech-ltd-2/` }],
+		links: [{ label: 'Announcement on iriic.uiu.ac.bd', url: `${WEB}/mou-between-iriicuiu-and-onnorokom-edtech-ltd-2/` }],
 		sources: [`${WEB}/mou-between-iriicuiu-and-onnorokom-edtech-ltd-2/`]
 	},
 	{
@@ -1069,7 +1069,7 @@ export const projects: Project[] = [
 		sortKey: 20240900,
 		summary: 'IRIIC and LankaBangla Finance Ltd signed a memorandum of understanding at UIU for industry–academia research collaboration.',
 		partners: ['LankaBangla Finance Ltd'],
-		links: [{ label: 'Announcement on the previous IRIIC site', url: `${WEB}/mou-was-signed-between-iriicuiu-and-lankabangla-finance-ltd/` }],
+		links: [{ label: 'Announcement on iriic.uiu.ac.bd', url: `${WEB}/mou-was-signed-between-iriicuiu-and-lankabangla-finance-ltd/` }],
 		sources: [`${WEB}/mou-was-signed-between-iriicuiu-and-lankabangla-finance-ltd/`]
 	},
 	{
@@ -1082,7 +1082,7 @@ export const projects: Project[] = [
 		sortKey: 20240728,
 		summary: 'IRIIC and the Intelligent Police Research Center (IPRIC) signed a memorandum of understanding to collaborate on research and innovation for police services.',
 		partners: ['Intelligent Police Research Center (IPRIC)'],
-		links: [{ label: 'Announcement on the previous IRIIC site', url: `${WEB}/mou-between-iriicuiu-and-intelligent-police-research-center-ipric/` }],
+		links: [{ label: 'Announcement on iriic.uiu.ac.bd', url: `${WEB}/mou-between-iriicuiu-and-intelligent-police-research-center-ipric/` }],
 		sources: [`${WEB}/mou-between-iriicuiu-and-intelligent-police-research-center-ipric/`]
 	},
 	{
@@ -1095,7 +1095,7 @@ export const projects: Project[] = [
 		sortKey: 20240708,
 		summary: 'IRIIC and the FBCCI Innovation and Research Centre signed a memorandum of understanding at FBCCI IRC to foster innovation and research activity in government and non-government sectors.',
 		partners: ['FBCCI Innovation and Research Centre'],
-		links: [{ label: 'Announcement on the previous IRIIC site', url: `${WEB}/mou-between-iriicuiu-and-fbcci-innovation-research-centre-fbcci-irc-2/` }],
+		links: [{ label: 'Announcement on iriic.uiu.ac.bd', url: `${WEB}/mou-between-iriicuiu-and-fbcci-innovation-research-centre-fbcci-irc-2/` }],
 		sources: [`${WEB}/mou-between-iriicuiu-and-fbcci-innovation-research-centre-fbcci-irc-2/`]
 	},
 	{
@@ -1110,7 +1110,7 @@ export const projects: Project[] = [
 			'IRIIC, the Endometriosis-Adenomyosis Society of Bangladesh and Incepta Pharmaceuticals signed a tripartite memorandum of understanding to develop AI-based screening protocols and interventions for endometriosis and adenomyosis. This work led to SmartEndo.',
 		partners: ['Endometriosis-Adenomyosis Society of Bangladesh', 'Incepta Pharmaceuticals Ltd'],
 		links: [
-			{ label: 'Announcement on the previous IRIIC site', url: `${WEB}/mou-between-iriicuiu-and-esb-incepta-pharmaceuticals-ltd-2/` },
+			{ label: 'Announcement on iriic.uiu.ac.bd', url: `${WEB}/mou-between-iriicuiu-and-esb-incepta-pharmaceuticals-ltd-2/` },
 			{ label: 'SmartEndo', url: '/projects/smartendo/' }
 		],
 		sources: [`${WEB}/mou-between-iriicuiu-and-esb-incepta-pharmaceuticals-ltd-2/`]

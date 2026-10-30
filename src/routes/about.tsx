@@ -101,7 +101,7 @@ export default function About() {
 
 			<section className="bg-white py-20 lg:py-24" aria-labelledby="recognition">
 				<div className="container-page">
-					<SectionHead id="recognition" eyebrow="Recognition" title="Awards for the work" lede="Awards in IRIIC’s record, credited to whoever received them: the director, AIMS Lab, project teams or CMED Health." />
+					<SectionHead id="recognition" eyebrow="Recognition" title="Awards for the work" lede="Awards to IRIIC’s director, AIMS Lab, project teams and CMED Health." />
 					<ul className="mt-10 divide-y divide-ink-900/10 border-y border-ink-900/10">
 						{recognition.map((item) => (
 							<li key={item.title + item.year} className="grid gap-1 py-4 sm:grid-cols-[5rem_1fr_auto] sm:items-baseline sm:gap-6">

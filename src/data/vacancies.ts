@@ -48,7 +48,7 @@ export const vacancies: Vacancy[] = [
 			'Experience on academic, research or donor-funded projects is an advantage.'
 		],
 		howToApply: {
-			steps: ['Apply through the online form linked from the UIU careers page ("Apply Now").'],
+			steps: ['Apply through the online application form.'],
 			url: 'https://forms.gle/phCiZGWX6FKNJ6iC9',
 			urlLabel: 'Open the application form'
 		},
@@ -82,7 +82,7 @@ export const vacancies: Vacancy[] = [
 			'Strong integrity and commitment to financial transparency.'
 		],
 		howToApply: {
-			steps: ['Apply through the online form linked from the UIU careers page ("Apply Now").'],
+			steps: ['Apply through the online application form.'],
 			url: 'https://forms.gle/iKXpiY2YQBHGGms58',
 			urlLabel: 'Open the application form'
 		},
@@ -115,7 +115,7 @@ export const vacancies: Vacancy[] = [
 			'Organised, trustworthy with confidential data, and a good team communicator.'
 		],
 		howToApply: {
-			steps: ['Apply through the online form linked from the UIU careers page ("Apply Now").'],
+			steps: ['Apply through the online application form.'],
 			url: 'https://forms.gle/W5F7QmXiiQCwsMHq6',
 			urlLabel: 'Open the application form'
 		},
@@ -131,7 +131,7 @@ export const vacancies: Vacancy[] = [
 		deadline: '2026-10-22',
 		openings: 20,
 		about:
-			'A two-month, shift-based field internship collecting consented doctor–patient consultation recordings for AIMScribe in participating GP clinics. The post listed 14 regular and 6 relief positions across Badda and Mohakhali, Mirpur 11 and 12, Ershadnagar and Tongi, Dholpur and Jatrabari, Shyampur, Narayanganj and Dakshinkhan.',
+			'A two-month, shift-based field internship collecting consented doctor–patient consultation recordings for AIMScribe in participating GP clinics. There were 14 regular and 6 relief positions across Badda and Mohakhali, Mirpur 11 and 12, Ershadnagar and Tongi, Dholpur and Jatrabari, Shyampur, Narayanganj and Dakshinkhan.',
 		responsibilities: [
 			'Check the recording setup in each consultation room before every shift.',
 			'Facilitate informed consent and confirm each recording and its records are complete.',
@@ -148,7 +148,7 @@ export const vacancies: Vacancy[] = [
 			'Shortlisted candidates complete orientation, ethics and equipment training and a competency check before deployment.'
 		],
 		howToApply: {
-			steps: ['Apply through the online form linked from the UIU careers page ("Apply Now").'],
+			steps: ['Apply through the online application form.'],
 			url: 'https://forms.gle/cDNtoFTVYcnn5nEf7',
 			urlLabel: 'Open the application form'
 		},
@@ -163,7 +163,7 @@ export const vacancies: Vacancy[] = [
 		location: 'United International University, Dhaka',
 		deadline: '2026-09-17',
 		about:
-			'AIMS Lab at IRIIC sought research engineers in natural language processing to work on Bengali language technologies and large language models, on projects including Smart Reception (AI for citizen services) and Police GPT (an assistant for police-related information). The role was 40 hours a week with weekly group meetings.',
+			'AIMS Lab at IRIIC recruited research engineers in natural language processing to work on Bengali language technologies and large language models, on projects including Smart Reception (AI for citizen services) and Police GPT (an assistant for police-related information). The role was 40 hours a week with weekly group meetings.',
 		responsibilities: [
 			'Run research and experiments in NLP, LLMs and language modelling.',
 			'Develop and evaluate Bengali NLP and LLM-based applications.',
@@ -177,7 +177,7 @@ export const vacancies: Vacancy[] = [
 			'Good understanding of NLP, machine learning and language models.',
 			'PyTorch, Hugging Face Transformers or similar is preferred; software development and Git are a plus.'
 		],
-		howToApply: { steps: ['Fill out the Google Form given in the post.'], url: 'https://forms.gle/oJtSz89xqNK45RGc9', urlLabel: 'Open the application form' },
+		howToApply: { steps: ['Apply through the online application form.'], url: 'https://forms.gle/oJtSz89xqNK45RGc9', urlLabel: 'Open the application form' },
 		sourceUrl: FB,
 		sources: [`${FB} (Research Engineer (NLP) post, deadline 17 September 2026)`]
 	},
@@ -203,7 +203,7 @@ export const vacancies: Vacancy[] = [
 			'Able to prepare reports, proposals, minutes and official correspondence.',
 			'Comfortable working with researchers, faculty, industry and external organisations under pressure and with little supervision.'
 		],
-		howToApply: { steps: ['Apply through the link given in the post ("Apply Here").'], url: 'https://forms.gle/36qoYdn9QsbtFyU89', urlLabel: 'Open the application form' },
+		howToApply: { steps: ['Apply through the online application form.'], url: 'https://forms.gle/36qoYdn9QsbtFyU89', urlLabel: 'Open the application form' },
 		sourceUrl: FB,
 		sources: [`${FB} (Project Coordinator post, deadline 17 September 2026)`]
 	},
@@ -227,7 +227,7 @@ export const vacancies: Vacancy[] = [
 			'Strong communication, organisation and multitasking.',
 			'Proficient in Microsoft Office and professional documentation, with basic research and reporting skills.'
 		],
-		howToApply: { steps: ['Apply through the link given in the post ("Apply Here").'], url: 'https://forms.gle/Ux74PggTFFetg5ZF6', urlLabel: 'Open the application form' },
+		howToApply: { steps: ['Apply through the online application form.'], url: 'https://forms.gle/Ux74PggTFFetg5ZF6', urlLabel: 'Open the application form' },
 		sourceUrl: FB,
 		sources: [`${FB} (Project Coordinator (Full Time/Intern) post, deadline 16 May 2026)`]
 	},
@@ -254,7 +254,7 @@ export const vacancies: Vacancy[] = [
 			'Experience with short-form and long-form formats and with YouTube, Facebook, LinkedIn and Instagram standards.',
 			'Able to manage several projects and deadlines independently.'
 		],
-		howToApply: { steps: ['Apply through the "Apply Now" link on the post.'], url: 'https://docs.google.com/forms/d/e/1FAIpQLSdOl6puFPJrDuIBg84XBTeBje1BjgKznS8NGvWUXD7fvzGy4g/viewform?usp=header', urlLabel: 'Open the application form' },
+		howToApply: { steps: ['Apply through the online application form.'], url: 'https://docs.google.com/forms/d/e/1FAIpQLSdOl6puFPJrDuIBg84XBTeBje1BjgKznS8NGvWUXD7fvzGy4g/viewform?usp=header', urlLabel: 'Open the application form' },
 		sourceUrl: 'https://iriic.uiu.ac.bd/video-content-creator/',
 		sources: ['https://iriic.uiu.ac.bd/video-content-creator/']
 	},
@@ -276,7 +276,7 @@ export const vacancies: Vacancy[] = [
 			'Basic design and editing skills, and an eye for capturing events on the ground.',
 			'Understanding of how social media trends work.'
 		],
-		howToApply: { steps: ['Apply through the link given in the post ("Apply now").'], url: 'https://tinyurl.com/36pr8c3n', urlLabel: 'Open the application link' },
+		howToApply: { steps: ['Apply through the online application form.'], url: 'https://tinyurl.com/36pr8c3n', urlLabel: 'Open the application form' },
 		sourceUrl: FB,
 		sources: [`${FB} (Social Media Content Manager post, deadline 25 January 2026)`]
 	},
@@ -295,7 +295,7 @@ export const vacancies: Vacancy[] = [
 			'Improve internal workflows and processes.'
 		],
 		requirements: ['Proactive, organised and a clear communicator; fresh graduates were encouraged to apply.', 'Comfortable with Microsoft Office, documentation, coordination and basic research.'],
-		howToApply: { steps: ['Apply through the link given in the post ("Apply Now").'], url: 'https://tinyurl.com/nwe2k98x', urlLabel: 'Open the application link' },
+		howToApply: { steps: ['Apply through the online application form.'], url: 'https://tinyurl.com/nwe2k98x', urlLabel: 'Open the application form' },
 		sourceUrl: FB,
 		sources: [`${FB} (Project Coordinator post, deadline 5 December 2025)`]
 	},
@@ -314,7 +314,7 @@ export const vacancies: Vacancy[] = [
 			'Apply NLP, signal processing and machine learning to real problems, and write up findings.'
 		],
 		requirements: ['BSc or MSc in CSE or EEE with a CGPA of at least 3.00 out of 4.00.', 'At least two years of Python.', 'Proficiency in NLP, language modelling and machine learning; software development experience is a plus.'],
-		howToApply: { steps: ['Fill in the Google Form given in the post.', 'Select "NLP" as the preferred track.'], url: 'https://tinyurl.com/8wab2dew', urlLabel: 'Open the application form' },
+		howToApply: { steps: ['Apply through the online application form.', 'Select "NLP" as the preferred track.'], url: 'https://tinyurl.com/8wab2dew', urlLabel: 'Open the application form' },
 		sourceUrl: FB,
 		sources: [`${FB} (Research Engineer (NLP) five positions post, deadline 30 September 2025)`]
 	},
@@ -325,10 +325,10 @@ export const vacancies: Vacancy[] = [
 		type: 'Research engineer',
 		location: 'United International University, Dhaka',
 		deadline: '2025-09-20',
-		about: 'Research engineer posts on AIMS Lab projects in data science and in AI for power and energy. The original post gave the full role details in its images.',
+		about: 'Research engineer posts on AIMS Lab projects in data science and in AI for power and energy.',
 		responsibilities: [],
 		requirements: [],
-		howToApply: { steps: ['Fill out the Google Form given in the post, or visit the IRIIC careers page.'], url: 'https://tinyurl.com/8wab2dew', urlLabel: 'Open the application form' },
+		howToApply: { steps: ['Apply through the online application form.'], url: 'https://tinyurl.com/8wab2dew', urlLabel: 'Open the application form' },
 		sourceUrl: FB,
 		sources: [`${FB} (Research Engineer Data Science / AI in Power & Energy post, deadline 20 September 2025)`]
 	},
@@ -339,10 +339,10 @@ export const vacancies: Vacancy[] = [
 		type: 'Research engineer',
 		location: 'United International University, Dhaka',
 		deadline: '2025-08-01',
-		about: 'Research engineer posts on AIMS Lab projects in brain–computer interfaces, data science, natural language processing, and AI in power and energy. The original post gave the full role details in its images.',
+		about: 'Research engineer posts on AIMS Lab projects in brain–computer interfaces, data science, natural language processing, and AI in power and energy.',
 		responsibilities: [],
 		requirements: [],
-		howToApply: { steps: ['Apply by email.'], url: 'mailto:aimsl@uiu.ac.bd', urlLabel: 'aimsl@uiu.ac.bd' },
+		howToApply: { steps: ['Send your application by email.'], url: 'mailto:aimsl@uiu.ac.bd', urlLabel: 'aimsl@uiu.ac.bd' },
 		sourceUrl: FB,
 		sources: [`${FB} (Research Engineers post, deadline 1 August 2025)`, `${FB} (earlier cohort, deadline 10 May 2025)`]
 	},
@@ -365,7 +365,7 @@ export const vacancies: Vacancy[] = [
 			'Strong communication in English and Bengali.',
 			'Detail-oriented and proactive; proficient in Microsoft Office, with project management tools a plus.'
 		],
-		howToApply: { steps: ['Email the address given in the post, or scan the QR code on the post to apply.'], url: 'mailto:aimsl@uiu.ac.bd', urlLabel: 'aimsl@uiu.ac.bd' },
+		howToApply: { steps: ['Send your application by email.'], url: 'mailto:aimsl@uiu.ac.bd', urlLabel: 'aimsl@uiu.ac.bd' },
 		sourceUrl: FB,
 		sources: [`${FB} (Project Coordinator Intern post, deadline 1 August 2025)`]
 	}

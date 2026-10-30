@@ -12,13 +12,13 @@ const LEDES: Record<(typeof peopleGroups)[number], string | undefined> = {
 	Director: undefined,
 	Advisers: 'Senior UIU academics who advise the institute.',
 	Administration: 'The people who run IRIIC’s programmes, events and communications.',
-	'Research team': 'Research physicians and engineers, with the projects IRIIC lists them on.'
+	'Research team': 'Research physicians and engineers, and the projects they work on.'
 };
 
 export default function People() {
 	return (
 		<>
-			<PageHeader eyebrow="People" title="The people behind IRIIC" lede="The director, advisers, administration and research team, as listed on IRIIC’s team page." />
+			<PageHeader eyebrow="People" title="The people behind IRIIC" lede="The director, advisers, administration and research team." />
 			{peopleGroups.map((group, groupIndex) => {
 				const members = people.filter((person) => person.group === group);
 				if (members.length === 0) return null;

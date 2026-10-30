@@ -50,11 +50,11 @@ export default function Careers() {
 	const past = pastVacancies(BUILD_DATE);
 	return (
 		<>
-			<PageIntro eyebrow="Careers" title="Work on research that reaches people" lede="IRIIC hires research engineers, research physicians, project coordinators and project staff, and takes interns. Each role links to its original announcement and explains how to apply." photo="hero/careers" photoAlt="Participants gathered around a mentor at the IRIIC innovation hub" />
+			<PageIntro eyebrow="Careers" title="Work on research that reaches people" lede="IRIIC hires research engineers, research physicians, project coordinators and project staff, and takes interns." photo="hero/careers" photoAlt="Participants gathered around a mentor at the IRIIC innovation hub" />
 
 			<section className="bg-paper py-20 lg:py-24" aria-labelledby="open-roles">
 				<div className="container-page">
-					<SectionHead id="open-roles" eyebrow="Open roles" title={open.length > 0 ? `${open.length} open ${open.length === 1 ? 'role' : 'roles'}` : 'No open positions right now'} lede={open.length > 0 ? 'Listed by closing date. Applications follow each post’s own instructions; this site does not collect CVs.' : undefined} />
+					<SectionHead id="open-roles" eyebrow="Open roles" title={open.length > 0 ? `${open.length} open ${open.length === 1 ? 'role' : 'roles'}` : 'No open positions right now'} lede={open.length > 0 ? 'Listed by closing date.' : undefined} />
 					{open.length > 0 ? (
 						<ul className="mt-10 grid gap-4">
 							{open.map((vacancy) => (
@@ -85,8 +85,8 @@ export default function Careers() {
 					</div>
 					<ul className="grid gap-5 sm:grid-cols-3 lg:col-span-2">
 						{[
-							{ title: 'Use the post’s route', text: 'Each role says how to apply, usually a form or an email address. Follow that exactly, including any subject line.' },
-							{ title: 'Watch the date', text: 'Roles close at the end of their deadline day, Dhaka time. Closed roles move to the archive below.' },
+							{ title: 'How to apply', text: 'Each role explains how to apply, usually by online form or email. Follow those instructions, including any subject line.' },
+							{ title: 'Deadlines', text: 'Applications close at the end of the deadline day, Dhaka time.' },
 							{ title: 'Questions', text: `For questions about a role, email ${CONTACT_EMAIL} and name the role in the subject.` }
 						].map((step) => (
 							<li key={step.title} className="card p-6">
@@ -101,7 +101,7 @@ export default function Careers() {
 			{past.length > 0 && (
 				<section className="bg-paper py-20 lg:py-24" aria-labelledby="past-vacancies">
 					<div className="container-page">
-						<SectionHead id="past-vacancies" eyebrow="Archive" title="Past vacancies" lede="Closed roles, kept for reference. They are no longer accepting applications." />
+						<SectionHead id="past-vacancies" eyebrow="Archive" title="Past vacancies" />
 						<ul className="mt-10 grid gap-4">
 							{past.map((vacancy) => (
 								<VacancyRow key={vacancy.slug} vacancy={vacancy} open={false} />

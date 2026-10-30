@@ -32,7 +32,7 @@ export default function News() {
 
 			<section className="bg-white py-20 lg:py-24" aria-labelledby="press">
 				<div className="container-page">
-					<SectionHead id="press" eyebrow="In the press" title="Coverage" lede="Articles about IRIIC and its labs. Links open the publisher’s site." />
+					<SectionHead id="press" eyebrow="In the press" title="Coverage" lede="Articles about IRIIC and its labs." />
 					<ul className="mt-12 grid gap-4 md:grid-cols-2">
 						{coverage.map((item) => (
 							<li key={item.slug} className="card flex flex-col gap-2 p-6">

@@ -86,7 +86,7 @@ export default function Projects() {
 
 	return (
 		<>
-			<PageIntro eyebrow="Projects" title="Everything IRIIC has built, run and signed" lede="Research projects, incubation cohorts, hackathons, events, visits and agreements, in one index. Dates appear only where a source states them." photo="hero/projects" photoAlt="Hackathon participants discussing a solution around a laptop" />
+			<PageIntro eyebrow="Projects" title="Everything IRIIC has built, run and signed" lede="Research projects, incubation cohorts, hackathons, events, visits and partnership agreements." photo="hero/projects" photoAlt="Hackathon participants discussing a solution around a laptop" />
 
 			<section className="bg-white py-20 lg:py-24" aria-labelledby="index-heading">
 				<div className="container-page">
@@ -126,7 +126,6 @@ export default function Projects() {
 					<div className="mt-6 flex flex-wrap items-center justify-between gap-3">
 						<p className="text-sm font-medium text-ink-700" aria-live="polite" aria-atomic="true">
 							{results.length} of {projects.length} {projects.length === 1 ? 'item' : 'items'}
-							{year !== null && ' (undated items are hidden when a year is chosen)'}
 						</p>
 						{filtersActive && (
 							<button type="button" className="link text-sm" onClick={clearFilters}>

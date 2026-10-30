@@ -37,7 +37,7 @@ export default function Privacy() {
 
 			<h3>Careers enquiries</h3>
 			<p>
-				This site does not accept job applications or CVs. Each vacancy explains how to apply through the route its original announcement gives, such as an application form or an email address; those routes are run by IRIIC or UIU, and the information you give there is handled for recruitment only. If you choose “Careers or expression of interest” on the contact form, please do not include a CV or sensitive personal information: tell us your interests and how to reach you, and we will reply with the right route.
+				Job applications are not made through this website. Each vacancy explains how to apply, usually by application form or email; those channels are run by IRIIC or UIU, and the information you give there is used for recruitment only. If you choose “Careers or expression of interest” on the contact form, please do not include a CV or sensitive personal information: tell us your interests and how to reach you, and we will reply with the right route.
 			</p>
 
 			<h2>How long we keep it</h2>
