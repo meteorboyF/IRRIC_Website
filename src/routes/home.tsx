@@ -4,15 +4,18 @@ import { partners } from '../data/partners';
 import { press } from '../data/press';
 import { projectBySlug, projects } from '../data/projects';
 import { formatDeadline, openVacancies } from '../data/vacancies';
+import { CentresShowcase } from '../components/CentresShowcase';
 import { CtaBand } from '../components/CtaBand';
+import { HeroShowcase } from '../components/HeroShowcase';
 import { Icon, type IconName } from '../components/Icon';
 import { PartnerLogo } from '../components/PartnerLogo';
+import { PhotoMosaic, type MosaicItem } from '../components/PhotoMosaic';
 import { ProjectCard } from '../components/ProjectCard';
 import { Reveal } from '../components/Reveal';
 import { SectionHead } from '../components/SectionHead';
 import { SmartLink } from '../components/SmartLink';
 import { Traces } from '../components/Traces';
-import { CTA, NAV } from '../components/nav';
+import { NAV } from '../components/nav';
 import { BUILD_DATE } from '../lib/config';
 import { img, imageSize, srcSet } from '../lib/img';
 import { seo } from '../lib/seo';
@@ -32,7 +35,15 @@ const PIPELINE: { title: string; text: string; icon: IconName }[] = [
 	{ title: 'Commercialisation', text: 'Taking research to market with industry and government, as CMED did when it became CMED Health.', icon: 'handshake' }
 ];
 
-const CENTRE_ICONS: IconName[] = ['flask', 'chip', 'rocket', 'newspaper', 'handshake'];
+const MOMENTS: MosaicItem[] = [
+	{ photo: 'projects/world-bank-delegation-2025/4', alt: 'World Bank delegation members talking with IRIIC hosts', caption: 'A World Bank delegation tours IRIIC’s flagship projects', slug: 'world-bank-delegation-2025' },
+	{ photo: 'projects/focus-mind/cover', alt: 'Adults in a meeting room, some wearing EEG headbands, during a Focus Mind session', caption: 'An EEG session for Focus Mind', slug: 'focus-mind' },
+	{ photo: 'projects/endometriosis-ai-workshop-2025/1', alt: 'Panel of speakers under the endometriosis and AI workshop banner', caption: 'Endometriosis and AI workshop', slug: 'endometriosis-ai-workshop-2025' },
+	{ photo: 'projects/innovation-conclave-2025/cover', alt: 'A presenter showing IRIIC projects on a screen to Innovation Conclave guests', caption: 'Innovation Conclave 2025', slug: 'innovation-conclave-2025' },
+	{ photo: 'projects/launchpad-cycle-1/2', alt: 'A LaunchPad team with judges and their seed funding cheque', caption: 'LaunchPad seed funding', slug: 'launchpad-cycle-1' },
+	{ photo: 'projects/world-ip-day-2025/2', alt: 'Two speakers in conversation on stage at the World IP Day seminar', caption: 'World IP Day seminar', slug: 'world-ip-day-2025' },
+	{ photo: 'projects/research-innovation-week-2024/cover', alt: 'Audience at the opening seminar of UIU Research and Innovation Week', caption: 'Research and Innovation Week 2024', slug: 'research-innovation-week-2024' }
+];
 
 function FramedPhoto({ name, alt, sizes, className, priority = false }: { name: string; alt: string; sizes: string; className: string; priority?: boolean }) {
 	const [width, height] = imageSize(name);
@@ -63,56 +74,17 @@ export default function Home() {
 			{/* ---------- hero ---------- */}
 			<section className="surface-sky relative overflow-hidden" aria-labelledby="hero-title">
 				<Traces className="pointer-events-none absolute top-4 right-[-4rem] hidden w-[52rem] max-w-none text-ocean-300/70 lg:block" />
-				<div className="container-page relative grid items-center gap-14 pt-10 pb-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10 lg:pt-16 lg:pb-20">
-					<div>
-						<p className="rise inline-flex items-center gap-2 rounded-full border border-ocean-700/15 bg-white/70 px-4 py-1.5 text-sm font-semibold text-ocean-800">
-							<span className="h-2 w-2 rounded-full bg-ember-400" aria-hidden="true" />
-							United International University · Dhaka
-						</p>
-						<h1 id="hero-title" className="rise rise-2 mt-6 text-[clamp(3rem,7.4vw,5.75rem)] leading-[0.96] tracking-[-0.035em]">
-							From the lab
-							<span className="block">
-								to the <span className="mark">market</span>.
-							</span>
-						</h1>
-						<p className="rise rise-3 mt-7 max-w-xl text-lg leading-relaxed text-ink-700 sm:text-xl">
-							IRIIC, the Institute of Research, Innovation, Incubation and Commercialization, brings UIU’s labs together with industry and government to turn AI, digital health and brain–computer interface research into tools people use and companies that last.
-						</p>
-						<div className="rise rise-3 mt-9 flex flex-wrap gap-3">
-							<Link to={CTA.to} className="btn btn-cta">
-								{CTA.label}
-								<Icon name="arrow-right" className="h-4 w-4" />
-							</Link>
-							<Link to={NAV.projects.to} className="btn btn-ghost">
-								{NAV.projects.label}
-							</Link>
-						</div>
-					</div>
+				<HeroShowcase />
+			</section>
 
-					{/* Photo collage, framed in the logo's sky and orange */}
-					<div className="rise rise-2 relative mx-auto w-full max-w-xl pb-6 lg:max-w-none">
-						<div className="relative ml-auto w-[84%]">
-							<div className="absolute -top-4 -right-4 h-full w-full rounded-[1.75rem] bg-ocean-200" aria-hidden="true" />
-							<FramedPhoto name="hero/home" alt="Teams of students and young professionals at work during the Harvard HSIL Hackathon at IRIIC" sizes="(min-width: 1024px) 38vw, 84vw" className="relative aspect-[4/5] shadow-card-lg" priority />
-						</div>
-						<div className="absolute bottom-0 left-0 w-[52%]">
-							<div className="absolute -bottom-3 -left-3 h-full w-full rounded-[1.75rem] bg-ember-300" aria-hidden="true" />
-							<FramedPhoto name="projects/launchpad-cycle-1/5" alt="LaunchPad finalists, mentors and judges together on stage" sizes="(min-width: 1024px) 22vw, 50vw" className="relative aspect-[4/3] border-4 border-white shadow-card-lg" />
-						</div>
-						<div className="card absolute top-4 left-0 flex max-w-[12.5rem] items-start gap-3 p-3 sm:top-10 sm:max-w-[15rem] sm:p-4">
-							<span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ember-100 text-ember-700 sm:h-10 sm:w-10">
-								<Icon name="trophy" className="h-5 w-5" />
-							</span>
-							<span>
-								<span className="block font-display text-base leading-tight font-bold text-ink-900">Bangladesh’s hub</span>
-								<span className="mt-0.5 block text-sm leading-snug text-ink-600">Harvard HSIL Hackathon, 2025 and 2026</span>
-							</span>
-						</div>
-					</div>
+			<CentresShowcase />
+
+			{/* ---------- how IRIIC works, and the numbers ---------- */}
+			<section className="surface-sky relative overflow-hidden pt-24 lg:pt-28" aria-labelledby="how-it-works">
+				<div className="container-page">
+					<SectionHead id="how-it-works" eyebrow="How IRIIC works" title="From research to commercialisation" lede="The four stages in IRIIC’s name, from a first idea to something people use." />
 				</div>
-
-				{/* The lab-to-market pipeline */}
-				<div className="container-page relative pb-16 lg:pb-20">
+				<div className="container-page relative mt-12 pb-16 lg:pb-20">
 					<ol className="card grid gap-px overflow-hidden bg-ocean-100 sm:grid-cols-2 lg:grid-cols-4" aria-label="How IRIIC works, in four stages">
 						{PIPELINE.map((stage, index) => (
 							<li key={stage.title} className="relative bg-white p-6 lg:p-7">
@@ -123,7 +95,7 @@ export default function Home() {
 									<span className="font-display text-sm font-semibold text-ocean-700">Stage {index + 1}</span>
 									{index < PIPELINE.length - 1 && <Icon name="arrow-right" className="ml-auto hidden h-5 w-5 text-ember-500 lg:block" />}
 								</div>
-								<h2 className="mt-4 text-xl">{stage.title}</h2>
+								<h3 className="mt-4 text-xl">{stage.title}</h3>
 								<p className="mt-2 text-[0.9375rem] leading-relaxed text-ink-600">{stage.text}</p>
 							</li>
 						))}
@@ -211,29 +183,19 @@ export default function Home() {
 				</section>
 			)}
 
-			{/* ---------- centres, as a connected chain ---------- */}
-			<section className="bg-paper py-24 lg:py-28" aria-labelledby="centres">
+			{/* ---------- IRIIC in pictures ---------- */}
+			<section className="bg-paper py-24 lg:py-28" aria-labelledby="moments">
 				<div className="container-page">
-					<SectionHead id="centres" eyebrow="Under one roof" title="Five labs and centres, one institute" lede="Each unit covers a different stage, from fundamental research to policy and industry partnerships." />
-					<div className="relative mt-14">
-						<span className="absolute top-[2.15rem] right-[10%] left-[10%] hidden h-0.5 bg-ocean-200 lg:block" aria-hidden="true" />
-						<ol className="relative grid gap-8 md:grid-cols-2 lg:grid-cols-5 lg:gap-6">
-							{centres.map((centre, index) => (
-								<Reveal as="li" key={centre.name} delay={(index % 5) as 0 | 1 | 2 | 3 | 4}>
-									<span className="relative z-10 mb-5 grid h-[4.3rem] w-[4.3rem] place-items-center rounded-full border-4 border-paper bg-white text-ocean-700 shadow-card">
-										<Icon name={CENTRE_ICONS[index] ?? 'chip'} className="h-7 w-7" />
-									</span>
-									<h3 className="text-xl">{centre.name}</h3>
-									<p className="mt-1 text-sm font-semibold text-ocean-700">{centre.full}</p>
-									<p className="mt-2.5 text-[0.9375rem] leading-relaxed text-ink-600">{centre.detail}</p>
-								</Reveal>
-							))}
-						</ol>
+					<div className="flex flex-wrap items-end justify-between gap-6">
+						<SectionHead id="moments" eyebrow="IRIIC in pictures" title="Workshops, visits, cohorts and talks" />
+						<Link to={NAV.news.to} className="btn btn-ghost">
+							{NAV.news.label}
+							<Icon name="arrow-right" className="h-4 w-4" />
+						</Link>
 					</div>
-					<Link to={NAV.about.to} className="btn btn-ghost mt-12">
-						{NAV.about.label}
-						<Icon name="arrow-right" className="h-4 w-4" />
-					</Link>
+					<div className="mt-12">
+						<PhotoMosaic items={MOMENTS} label="Photos from IRIIC events" />
+					</div>
 				</div>
 			</section>
 

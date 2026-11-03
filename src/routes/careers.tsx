@@ -50,7 +50,7 @@ export default function Careers() {
 	const past = pastVacancies(BUILD_DATE);
 	return (
 		<>
-			<PageIntro eyebrow="Careers" title="Work on research that reaches people" lede="IRIIC hires research engineers, research physicians, project coordinators and project staff, and takes interns." photo="hero/careers" photoAlt="Participants gathered around a mentor at the IRIIC innovation hub" />
+			<PageIntro eyebrow="Careers" title="Work on research that reaches people" lede="IRIIC hires research engineers, research physicians, project coordinators and project staff, and takes interns." photo="hero/careers" photoAlt="Participants gathered around a mentor at the IRIIC innovation hub" inset={{ photo: 'projects/ai-essentials-capital-markets-2025/1', alt: 'Participants working together at laptops' }} />
 
 			<section className="bg-paper py-20 lg:py-24" aria-labelledby="open-roles">
 				<div className="container-page">

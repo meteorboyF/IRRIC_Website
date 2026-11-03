@@ -1,8 +1,9 @@
 import { Link } from 'react-router';
-import { centres, milestones, recognition } from '../data/about';
+import { milestones, recognition } from '../data/about';
 import { people } from '../data/people';
 import { CtaBand } from '../components/CtaBand';
 import { Icon } from '../components/Icon';
+import { CentresShowcase } from '../components/CentresShowcase';
 import { PageIntro } from '../components/PageIntro';
 import { ProjectImage } from '../components/ProjectImage';
 import { Reveal } from '../components/Reveal';
@@ -17,7 +18,7 @@ export default function About() {
 	const director = people.find((person) => person.group === 'Director');
 	return (
 		<>
-			<PageIntro eyebrow="About" title="One institute between the lab and the market" lede="IRIIC was set up at United International University to close the gap between academia, industry and government, and to turn social and industrial problems into working solutions." photo="hero/about" photoAlt="World Bank delegation members talking with IRIIC hosts at United International University" />
+			<PageIntro eyebrow="About" title="One institute between the lab and the market" lede="IRIIC was set up at United International University to close the gap between academia, industry and government, and to turn social and industrial problems into working solutions." photo="hero/about" photoAlt="World Bank delegation members talking with IRIIC hosts at United International University" inset={{ photo: 'projects/world-bank-delegation-2025/1', alt: 'Group photo of the World Bank delegation with UIU and IRIIC hosts' }} />
 
 			<section className="bg-paper py-24 lg:py-32" aria-labelledby="purpose">
 				<div className="container-page grid gap-12 lg:grid-cols-[1fr_1fr]">
@@ -30,26 +31,7 @@ export default function About() {
 				</div>
 			</section>
 
-			<section className="border-y border-ink-900/8 bg-white py-24 lg:py-32" aria-labelledby="centres">
-				<div className="container-page">
-					<SectionHead id="centres" eyebrow="Structure" title="Five units, one institute" />
-					<ul className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-						{centres.map((centre, index) => (
-							<Reveal as="li" key={centre.name} delay={(index % 3) as 0 | 1 | 2} className="card p-7">
-								<h3 className="font-display text-xl font-bold">{centre.name}</h3>
-								<p className="mt-1 text-sm font-semibold text-ocean-700">{centre.full}</p>
-								<p className="mt-3 text-sm leading-relaxed text-ink-600">{centre.detail}</p>
-								{'url' in centre && centre.url && (
-									<SmartLink href={centre.url} className="link mt-4 inline-flex items-center gap-1.5 text-sm">
-										Visit the website
-										<Icon name="arrow-up-right" className="h-4 w-4" />
-									</SmartLink>
-								)}
-							</Reveal>
-						))}
-					</ul>
-				</div>
-			</section>
+			<CentresShowcase showLink={false} />
 
 			<section className="bg-paper py-24 lg:py-32" aria-labelledby="timeline">
 				<div className="container-page">

@@ -7,6 +7,7 @@ import { Reveal } from '../components/Reveal';
 import { SectionHead } from '../components/SectionHead';
 import { SmartLink } from '../components/SmartLink';
 import { NAV } from '../components/nav';
+import { img, imageSize, srcSet } from '../lib/img';
 import { seo } from '../lib/seo';
 
 export const meta = () => seo({ title: 'Programmes', description: 'How to work with IRIIC: startup incubation through LaunchPad, the Harvard HSIL Hackathon Dhaka hub, research collaboration with industry and government, training, and internships.', path: '/programmes/', image: 'hero/programmes' });
@@ -21,6 +22,7 @@ function projectLink(slug: string) {
 interface Programme {
 	id: string;
 	icon: IconName;
+	photo: { name: string; alt: string };
 	eyebrow: string;
 	title: string;
 	text: string;
@@ -33,6 +35,7 @@ const PROGRAMMES: Programme[] = [
 	{
 		id: 'incubation',
 		icon: 'rocket',
+		photo: { name: 'projects/launchpad-cycle-1/1', alt: 'A winning LaunchPad team holding a seed funding cheque' },
 		eyebrow: 'Incubation',
 		title: 'LaunchPad by UIHP@UIU',
 		text: 'The startup incubation programme of UIU’s University Innovation Hub, hosted by IRIIC and supported by the DEIED project of the Bangladesh Hi-Tech Park Authority, the ICT Division and the World Bank.',
@@ -46,6 +49,7 @@ const PROGRAMMES: Programme[] = [
 	{
 		id: 'hackathon',
 		icon: 'trophy',
+		photo: { name: 'projects/harvard-hsil-hackathon-2025/2', alt: 'A hackathon team discussing ideas over their laptops' },
 		eyebrow: 'Competition',
 		title: 'Harvard HSIL Hackathon, Dhaka hub',
 		text: 'IRIIC is Bangladesh’s hub for the Health Systems Innovation Lab Hackathon run by the Harvard T.H. Chan School of Public Health. Teams spend two days building AI solutions for health system problems, with winners going on to HSIL’s venture programme.',
@@ -59,6 +63,7 @@ const PROGRAMMES: Programme[] = [
 	{
 		id: 'research',
 		icon: 'flask',
+		photo: { name: 'projects/focus-mind/cover', alt: 'Adults in a meeting room, some wearing EEG headbands, during a Focus Mind research session' },
 		eyebrow: 'Research collaboration',
 		title: 'Research with industry and government',
 		text: 'Through its Industry & Academia Collaboration Center and its labs, IRIIC works with companies, public bodies and universities on research that can become products, policy or intellectual property.',
@@ -72,6 +77,7 @@ const PROGRAMMES: Programme[] = [
 	{
 		id: 'training',
 		icon: 'school',
+		photo: { name: 'projects/ai-essentials-capital-markets-2025/cover', alt: 'Trainer talking with LankaBangla Securities officials around a table at the AI training' },
 		eyebrow: 'Training and events',
 		title: 'Training, talks and seminars',
 		text: 'Hands-on training for professional teams, and public talks and seminars on research, innovation and intellectual property.',
@@ -87,7 +93,7 @@ const PROGRAMMES: Programme[] = [
 export default function Programmes() {
 	return (
 		<>
-			<PageIntro eyebrow="Programmes" title="Ways to work with IRIIC" lede="Incubation for founders, a Harvard hackathon hub, research collaboration for partners, training for teams, and internships for students." photo="hero/programmes" photoAlt="Audience at the LaunchPad final pitch day" />
+			<PageIntro eyebrow="Programmes" title="Ways to work with IRIIC" lede="Incubation for founders, a Harvard hackathon hub, research collaboration for partners, training for teams, and internships for students." photo="hero/programmes" photoAlt="Audience at the LaunchPad final pitch day" inset={{ photo: 'projects/harvard-hsil-hackathon-2025/4', alt: 'Hackathon participants concentrating on their work' }} />
 
 			<section className="bg-paper py-24 lg:py-32">
 				<div className="container-page grid gap-8">
@@ -113,12 +119,15 @@ export default function Programmes() {
 									))}
 								</ul>
 							</div>
-							<div className="flex flex-col justify-between gap-6 rounded-xl bg-paper p-6">
-								<div>
+							<div className="flex flex-col gap-6 overflow-hidden rounded-xl bg-paper">
+								<div className="frame aspect-[16/10] rounded-none">
+									<img src={img(programme.photo.name, 'sm')} srcSet={srcSet(programme.photo.name)} sizes="(min-width: 1024px) 34vw, 100vw" alt={programme.photo.alt} width={imageSize(programme.photo.name)[0]} height={imageSize(programme.photo.name)[1]} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+								</div>
+								<div className="px-6">
 									<p className="text-sm font-semibold text-ink-700">Who it is for</p>
 									<p className="mt-1 leading-relaxed text-ink-900">{programme.who}</p>
 								</div>
-								<ul className="grid gap-2">
+								<ul className="mt-auto grid gap-2 px-6 pb-6">
 									{programme.links.map((link) => (
 										<li key={link.to}>
 											<Link to={link.to} className="link inline-flex items-center gap-1.5">

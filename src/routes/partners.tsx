@@ -26,7 +26,7 @@ const LEDES: Record<(typeof partnerKinds)[number], string> = {
 export default function Partners() {
 	return (
 		<>
-			<PageIntro eyebrow="Partners" title="Who IRIIC works with" lede="Universities, hospitals, companies and government bodies in Bangladesh and abroad." photo="hero/partners" photoAlt="Group photo of a World Bank delegation with UIU and IRIIC hosts" />
+			<PageIntro eyebrow="Partners" title="Who IRIIC works with" lede="Universities, hospitals, companies and government bodies in Bangladesh and abroad." photo="hero/partners" photoAlt="Group photo of a World Bank delegation with UIU and IRIIC hosts" inset={{ photo: 'projects/innovation-conclave-2025/2', alt: 'Guests in discussion around a meeting table at the Innovation Conclave' }} />
 			{partnerKinds.map((kind, index) => {
 				const group = partners.filter((partner) => partner.kind === kind);
 				if (group.length === 0) return null;

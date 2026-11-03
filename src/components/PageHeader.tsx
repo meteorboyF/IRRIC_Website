@@ -15,6 +15,8 @@ interface Props {
 export function PageHeader({ eyebrow, title, lede, before, children }: Props) {
 	return (
 		<section className="surface-sky relative overflow-hidden">
+			<div className="glow-orb pointer-events-none absolute -top-24 right-[10%] h-72 w-72 rounded-full bg-ocean-200/70 blur-3xl" aria-hidden="true" />
+			<div className="glow-orb pointer-events-none absolute -bottom-24 left-[30%] h-60 w-60 rounded-full bg-ember-200/40 blur-3xl" aria-hidden="true" />
 			<Traces className="pointer-events-none absolute hidden lg:block -top-16 -right-28 w-[40rem] max-w-none text-ocean-300/50" />
 			<div className="container-page relative pt-12 pb-14 lg:pt-16 lg:pb-16">
 				<div className="rise max-w-4xl">

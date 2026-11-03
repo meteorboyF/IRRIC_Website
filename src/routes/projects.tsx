@@ -86,7 +86,7 @@ export default function Projects() {
 
 	return (
 		<>
-			<PageIntro eyebrow="Projects" title="Everything IRIIC has built, run and signed" lede="Research projects, incubation cohorts, hackathons, events, visits and partnership agreements." photo="hero/projects" photoAlt="Hackathon participants discussing a solution around a laptop" />
+			<PageIntro eyebrow="Projects" title="Everything IRIIC has built, run and signed" lede="Research projects, incubation cohorts, hackathons, events, visits and partnership agreements." photo="hero/projects" photoAlt="Hackathon participants discussing a solution around a laptop" inset={{ photo: 'projects/focus-mind/cover', alt: 'Adults in a meeting room, some wearing EEG headbands, during a Focus Mind session' }} />
 
 			<section className="bg-white py-20 lg:py-24" aria-labelledby="index-heading">
 				<div className="container-page">

@@ -51,6 +51,8 @@ export default function ProjectDetail() {
 	const coverage = pressByProject(project.slug);
 	const related = projects.filter((other) => other.slug !== project.slug && other.type === project.type).slice(0, 3);
 	const heroPhoto = project.image && project.image.fit !== 'contain' ? project.image : null;
+	// A second photograph from the same event, when there is one.
+	const insetPhoto = heroPhoto ? project.gallery?.find((photo) => photo.fit === 'cover' && photo.name !== heroPhoto.name) : undefined;
 
 	const eyebrow = `${project.type}${project.dateLabel ? ` · ${project.dateLabel}` : ''}`;
 	const backLink = (
@@ -69,7 +71,7 @@ export default function ProjectDetail() {
 	return (
 		<>
 			{heroPhoto ? (
-				<PageIntro eyebrow={eyebrow} title={project.title} lede={project.tagline} photo={heroPhoto.name} photoAlt={heroPhoto.alt} before={backLink} />
+				<PageIntro eyebrow={eyebrow} title={project.title} lede={project.tagline} photo={heroPhoto.name} photoAlt={heroPhoto.alt} inset={insetPhoto ? { photo: insetPhoto.name, alt: insetPhoto.alt } : undefined} before={backLink} />
 			) : (
 				<PageHeader eyebrow={eyebrow} title={project.title} lede={project.tagline} before={backLink} />
 			)}
