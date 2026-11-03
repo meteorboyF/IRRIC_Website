@@ -3,7 +3,7 @@
 # ---------- build ----------
 # Every route is prerendered to static HTML, so Node only produces files;
 # nothing runs at serve time.
-FROM node:22.22-alpine AS builder
+FROM node:22.23-alpine AS builder
 WORKDIR /app
 
 # Install from the lockfile first so this layer is cached until it changes.
